@@ -1,0 +1,16 @@
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\bin\Debug\net8.0-windows\Classes and More 1.exe
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\bin\Debug\net8.0-windows\Classes and More 1.deps.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\bin\Debug\net8.0-windows\Classes and More 1.runtimeconfig.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\bin\Debug\net8.0-windows\Classes and More 1.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\bin\Debug\net8.0-windows\Classes and More 1.pdb
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes_and_More_1.Form1.resources
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.csproj.GenerateResource.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.AssemblyInfoInputs.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.AssemblyInfo.cs
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.csproj.CoreCompileInputs.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\refint\Classes and More 1.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.pdb
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.genruntimeconfig.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\ref\Classes and More 1.dll
