@@ -14,3 +14,5 @@ C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes a
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.pdb
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.genruntimeconfig.cache
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\ref\Classes and More 1.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes and More 1.sourcelink.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Classes and More 1\Classes and More 1\obj\Debug\net8.0-windows\Classes_and_More_1.Properties.Resources.resources
