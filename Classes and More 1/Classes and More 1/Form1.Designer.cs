@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnToss = new Button();
-            listBox1 = new ListBox();
+            outputList = new ListBox();
             btnClear = new Button();
             btnShow = new Button();
             picCoinHead = new PictureBox();
             picCoinTail = new PictureBox();
             btnTossCoin = new Button();
+            btnPetName = new Button();
+            btnCircle = new Button();
             ((System.ComponentModel.ISupportInitialize)picCoinHead).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCoinTail).BeginInit();
             SuspendLayout();
@@ -51,15 +53,15 @@
             btnToss.UseVisualStyleBackColor = true;
             btnToss.Click += btnToss_Click;
             // 
-            // listBox1
+            // outputList
             // 
-            listBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 28;
-            listBox1.Location = new Point(12, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(454, 340);
-            listBox1.TabIndex = 1;
+            outputList.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            outputList.FormattingEnabled = true;
+            outputList.ItemHeight = 28;
+            outputList.Location = new Point(12, 12);
+            outputList.Name = "outputList";
+            outputList.Size = new Size(454, 340);
+            outputList.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -114,17 +116,41 @@
             btnTossCoin.UseVisualStyleBackColor = true;
             btnTossCoin.Click += btnTossCoin_Click;
             // 
+            // btnPetName
+            // 
+            btnPetName.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPetName.Location = new Point(911, 56);
+            btnPetName.Name = "btnPetName";
+            btnPetName.Size = new Size(300, 73);
+            btnPetName.TabIndex = 7;
+            btnPetName.Text = "Pet NAme";
+            btnPetName.UseVisualStyleBackColor = true;
+            btnPetName.Click += btnPetName_Click;
+            // 
+            // btnCircle
+            // 
+            btnCircle.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCircle.Location = new Point(911, 163);
+            btnCircle.Name = "btnCircle";
+            btnCircle.Size = new Size(300, 116);
+            btnCircle.TabIndex = 8;
+            btnCircle.Text = "Circle Radius and Diameter";
+            btnCircle.UseVisualStyleBackColor = true;
+            btnCircle.Click += btnCircle_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(935, 513);
+            ClientSize = new Size(1223, 513);
+            Controls.Add(btnCircle);
+            Controls.Add(btnPetName);
             Controls.Add(btnTossCoin);
             Controls.Add(picCoinTail);
             Controls.Add(picCoinHead);
             Controls.Add(btnShow);
             Controls.Add(btnClear);
-            Controls.Add(listBox1);
+            Controls.Add(outputList);
             Controls.Add(btnToss);
             Name = "Form1";
             Text = "Toss Head Or Tail";
@@ -136,11 +162,13 @@
         #endregion
 
         private Button btnToss;
-        private ListBox listBox1;
+        private ListBox outputList;
         private Button btnClear;
         private Button btnShow;
         private PictureBox picCoinHead;
         private PictureBox picCoinTail;
         private Button btnTossCoin;
+        private Button btnPetName;
+        private Button btnCircle;
     }
 }

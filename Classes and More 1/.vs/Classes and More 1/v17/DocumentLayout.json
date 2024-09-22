@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\classes and more 1\\classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\classes and more 1\\classes and more 1\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\classes and more 1\\classes and more 1\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\classes and more 1\\classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\classes and more 1\\classes and more 1\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E2D59E-7976-4105-9710-43A12436D8AE}|Classes and More 1\\Classes and More 1.csproj|solutionrelative:classes and more 1\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Form1.cs",
               "RelativeDocumentMoniker": "Classes and More 1\\Form1.cs",
@@ -39,20 +47,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Circle.cs",
+              "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Circle.cs",
+              "RelativeDocumentMoniker": "Classes and More 1\\Circle.cs",
+              "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Circle.cs",
+              "RelativeToolTip": "Classes and More 1\\Circle.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T11:17:08.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pet.cs",
+              "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Pet.cs",
+              "RelativeDocumentMoniker": "Classes and More 1\\Pet.cs",
+              "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Pet.cs",
+              "RelativeToolTip": "Classes and More 1\\Pet.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T11:02:40.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Form1.cs",
               "RelativeDocumentMoniker": "Classes and More 1\\Form1.cs",
               "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Form1.cs",
               "RelativeToolTip": "Classes and More 1\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowE8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T15:24:30.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Coin.cs",
               "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Classes and More 1\\Classes and More 1\\Coin.cs",
               "RelativeDocumentMoniker": "Classes and More 1\\Coin.cs",
@@ -60,7 +94,8 @@
               "RelativeToolTip": "Classes and More 1\\Coin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T15:43:55.551Z"
+              "WhenOpened": "2024-09-16T15:43:55.551Z",
+              "EditorCaption": ""
             }
           ]
         }
