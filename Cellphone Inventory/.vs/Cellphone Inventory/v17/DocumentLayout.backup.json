@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\cellphone inventory\\cellphone inventory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|solutionrelative:cellphone inventory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\cellphone inventory\\cellphone inventory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|solutionrelative:cellphone inventory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\cellphone inventory\\cellphone inventory\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E96CD92-2364-4694-B2DF-F081A916451D}|Cellphone Inventory\\Cellphone Inventory.csproj|solutionrelative:cellphone inventory\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Form1.cs",
+              "RelativeDocumentMoniker": "Cellphone Inventory\\Form1.cs",
+              "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Form1.cs*",
+              "RelativeToolTip": "Cellphone Inventory\\Form1.cs*",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAqwGkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T21:36:57.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Phone.cs",
+              "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Phone.cs",
+              "RelativeDocumentMoniker": "Cellphone Inventory\\Phone.cs",
+              "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Phone.cs",
+              "RelativeToolTip": "Cellphone Inventory\\Phone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T21:30:03.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Form1.cs",
+              "RelativeDocumentMoniker": "Cellphone Inventory\\Form1.cs",
+              "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Form1.cs [Design]*",
+              "RelativeToolTip": "Cellphone Inventory\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T21:05:09.595Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

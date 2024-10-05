@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+lPW38Qhojs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Cellphone Inventory\\Cellphone Inventory\\Cellphone Inventory.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\l\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\l\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\l\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,23 @@
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Cellphone Inventory.exe
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Cellphone Inventory.deps.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Cellphone Inventory.runtimeconfig.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Cellphone Inventory.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Cellphone Inventory.pdb
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.csproj.AssemblyReference.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone_Inventory.Form1.resources
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone_Inventory.Properties.Resources.resources
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.csproj.GenerateResource.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.AssemblyInfoInputs.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.AssemblyInfo.cs
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.csproj.CoreCompileInputs.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.sourcelink.json
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphon.3580DD15.Up2Date
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\refint\Cellphone Inventory.dll
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.pdb
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\Cellphone Inventory.genruntimeconfig.cache
+C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Cellphone Inventory\Cellphone Inventory\obj\Debug\net8.0-windows\ref\Cellphone Inventory.dll
