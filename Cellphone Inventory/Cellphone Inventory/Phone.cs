@@ -8,13 +8,15 @@ namespace Cellphone_Inventory
 {
     internal class Phone
     {
-        //Fields Backing Field
-        private string _brand;
-        private string _model;
-        private decimal _price;
+        
+      
 
         //Default Constructor 
-        public Phone() {   }
+        public Phone() {
+            Brand = "";
+            Model = "";
+            Price = 0m;
+        }
 
         // auto Properties
         public string Brand { get; set; }

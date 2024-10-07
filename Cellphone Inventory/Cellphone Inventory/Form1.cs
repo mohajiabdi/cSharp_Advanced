@@ -27,6 +27,9 @@ namespace Cellphone_Inventory
             ClearTexts();
 
 
+           // MessageBox.Show(myPhone.Price.ToString("c"));
+
+
 
         }
 
@@ -57,7 +60,7 @@ namespace Cellphone_Inventory
 
         void ClearTexts()
         {
-            txtBrand.Text = string.Empty;
+            txtBrand.Clear();
             txtModel.Text = string.Empty;
             txtPrice.Text = string.Empty;
             txtBrand.Focus();
@@ -68,27 +71,31 @@ namespace Cellphone_Inventory
         {
 
 
-            // Check if there is a selected item
-            if (listBox1.SelectedIndex != -1)
-            {
-                // Get index of the selected item
-                int index = listBox1.SelectedIndex;
+            //// Check if there is a selected item
+            //if (listBox1.SelectedIndex != -1)
+            //{
+            //    // Get index of the selected item
+            //    int index = listBox1.SelectedIndex;
 
-                // Check if the index is within the range of the phonelist
-                if (index >= 0 && index < phonelist.Count)
-                {
-                    // Display the selected item Price
-                    MessageBox.Show(phonelist[index].Price.ToString("c"));
-                }
-                else
-                {
-                    MessageBox.Show("Selected index is out of range.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("No item is selected.");
-            }
+            //    // Check if the index is within the range of the phonelist
+            //    if (index >= 0 && index < phonelist.Count)
+            //    {
+            //        // Display the selected item Price
+            //        MessageBox.Show(phonelist[index].Price.ToString("c"));
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Selected index is out of range.");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No item is selected.");
+            //}
+
+          
+
+            MessageBox.Show(phonelist[listBox1.SelectedIndex].Price.ToString());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
