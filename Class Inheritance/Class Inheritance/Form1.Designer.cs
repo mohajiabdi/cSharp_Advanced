@@ -105,10 +105,11 @@
             // 
             // txtDrive
             // 
-            txtDrive.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDrive.Location = new Point(178, 420);
+            txtDrive.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtDrive.Location = new Point(178, 435);
             txtDrive.Name = "txtDrive";
-            txtDrive.Size = new Size(292, 47);
+            txtDrive.PlaceholderText = "Enter How many Wheels";
+            txtDrive.Size = new Size(292, 34);
             txtDrive.TabIndex = 6;
             // 
             // label12
@@ -123,10 +124,11 @@
             // 
             // txtPassengers
             // 
-            txtPassengers.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPassengers.Location = new Point(178, 492);
+            txtPassengers.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtPassengers.Location = new Point(178, 507);
             txtPassengers.Name = "txtPassengers";
-            txtPassengers.Size = new Size(292, 47);
+            txtPassengers.PlaceholderText = "Enter How Many Passengers";
+            txtPassengers.Size = new Size(292, 34);
             txtPassengers.TabIndex = 7;
             // 
             // label11
@@ -141,10 +143,11 @@
             // 
             // txtDoors
             // 
-            txtDoors.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDoors.Location = new Point(178, 348);
+            txtDoors.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtDoors.Location = new Point(178, 363);
             txtDoors.Name = "txtDoors";
-            txtDoors.Size = new Size(292, 47);
+            txtDoors.PlaceholderText = "Enter How Many Doors";
+            txtDoors.Size = new Size(292, 34);
             txtDoors.TabIndex = 5;
             // 
             // label5
@@ -159,10 +162,11 @@
             // 
             // txtPrice
             // 
-            txtPrice.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPrice.Location = new Point(178, 281);
+            txtPrice.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtPrice.Location = new Point(178, 296);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(292, 47);
+            txtPrice.PlaceholderText = "Enter Car Price";
+            txtPrice.Size = new Size(292, 34);
             txtPrice.TabIndex = 4;
             // 
             // label4
@@ -177,10 +181,11 @@
             // 
             // txtModel
             // 
-            txtModel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtModel.Location = new Point(181, 153);
+            txtModel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtModel.Location = new Point(181, 168);
             txtModel.Name = "txtModel";
-            txtModel.Size = new Size(292, 47);
+            txtModel.PlaceholderText = "Enter Car Model";
+            txtModel.Size = new Size(292, 34);
             txtModel.TabIndex = 2;
             // 
             // label3
@@ -195,10 +200,11 @@
             // 
             // txtMileage
             // 
-            txtMileage.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtMileage.Location = new Point(178, 218);
+            txtMileage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtMileage.Location = new Point(178, 233);
             txtMileage.Name = "txtMileage";
-            txtMileage.Size = new Size(292, 47);
+            txtMileage.PlaceholderText = "Enter Car Milliage";
+            txtMileage.Size = new Size(292, 34);
             txtMileage.TabIndex = 3;
             // 
             // label2
@@ -213,10 +219,11 @@
             // 
             // txtMake
             // 
-            txtMake.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtMake.Location = new Point(181, 91);
+            txtMake.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            txtMake.Location = new Point(181, 106);
             txtMake.Name = "txtMake";
-            txtMake.Size = new Size(292, 47);
+            txtMake.PlaceholderText = "Enter Car Maker";
+            txtMake.Size = new Size(292, 34);
             txtMake.TabIndex = 1;
             // 
             // label1

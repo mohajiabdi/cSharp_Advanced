@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{5A835402-1990-48C6-B2CB-9456F0E95538}|Class Inheritance\\Class Inheritance.csproj|solutionrelative:class inheritance\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A835402-1990-48C6-B2CB-9456F0E95538}|Class Inheritance\\Class Inheritance.csproj|c:\\users\\l\\documents\\github\\coding-zone\\c# advanced\\class inheritance\\class inheritance\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5A835402-1990-48C6-B2CB-9456F0E95538}|Class Inheritance\\Class Inheritance.csproj|C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Class Inheritance\\class inheritance\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5A835402-1990-48C6-B2CB-9456F0E95538}|Class Inheritance\\Class Inheritance.csproj|solutionrelative:class inheritance\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Class Inheritance\\Form1.cs",
               "ToolTip": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Class Inheritance\\Class Inheritance\\Form1.cs*",
               "RelativeToolTip": "Class Inheritance\\Form1.cs*",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAAAB0BAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwEAAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T19:57:28.741Z",
               "EditorCaption": ""
@@ -47,7 +47,8 @@
               "RelativeToolTip": "Class Inheritance\\Automobile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T19:37:21.607Z"
+              "WhenOpened": "2024-10-07T19:37:21.607Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

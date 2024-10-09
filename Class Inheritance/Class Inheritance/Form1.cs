@@ -1,4 +1,6 @@
 namespace Class_Inheritance
+
+
 {
     public partial class Form1 : Form
     {
@@ -52,6 +54,7 @@ namespace Class_Inheritance
             if (int.TryParse(txtMileage.Text, out mileage))
             {
                 car.Mileage = mileage;
+
 
                 //Get the Car's price
                 if (double.TryParse(txtPrice.Text, out price))
@@ -323,15 +326,9 @@ namespace Class_Inheritance
             txtPassengers.Text = "";
             txtMake.Focus();
 
-            lblDoors.Text = "";
-            lblMake.Text = "";
-            lblModel.Text = "";
-            lblPassengers.Text = "";
-            lblPrice.Text = "";
-            lblDrive.Text = "";
-            lblMileage.Text = "";
-            lblObject.Text = "";
+            
         }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -346,12 +343,15 @@ namespace Class_Inheritance
             {
                 clearData();
                 txtDrive.Enabled = false;
+                txtDrive.PlaceholderText = "";
                 txtPassengers.Enabled = false;
+                txtPassengers.PlaceholderText = "";
                 txtMake.Enabled = true;
                 txtModel.Enabled = true;
                 txtMileage.Enabled = true;
                 txtPrice.Enabled = true;
                 txtDoors.Enabled = true;
+                txtDoors.PlaceholderText = "Enter How Many Doors";
             }
             else if (comboBox1.SelectedIndex == 1)
             {
@@ -361,8 +361,11 @@ namespace Class_Inheritance
                 txtMileage.Enabled = true;
                 txtPrice.Enabled = true;
                 txtDoors.Enabled = false;
+                txtDoors.PlaceholderText = "";
                 txtPassengers.Enabled = false;
+                txtPassengers.PlaceholderText = "";
                 txtDrive.Enabled = true;
+                txtDrive.PlaceholderText = "Enter How Many Wheels";
             }
             else if (comboBox1.SelectedIndex == 2)
             {
@@ -372,9 +375,18 @@ namespace Class_Inheritance
                 txtMileage.Enabled = true;
                 txtPrice.Enabled = true;
                 txtDoors.Enabled = false;
+                txtDoors.PlaceholderText = "";
                 txtDrive.Enabled = false;
+                txtDrive.PlaceholderText = "";
                 txtPassengers.Enabled = true;
+                txtPassengers.PlaceholderText = "Enter How Many Passengers";
             }
         }
+
+
+
     }
+
+
+
 }
