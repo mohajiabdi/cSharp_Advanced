@@ -7,7 +7,7 @@ namespace Account_Simulator
             InitializeComponent();
 
         }
-        Overload account = new Overload(1000);
+        Overload account = new Overload(10000);
 
         private void btnShow_Click(object sender, EventArgs e)
         {

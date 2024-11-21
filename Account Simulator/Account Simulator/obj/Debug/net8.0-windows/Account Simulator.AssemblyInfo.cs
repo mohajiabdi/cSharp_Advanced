@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Account Simulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+253013bd4c817831d759e92e2e1e5e1053efefeb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b97f847622932219a0230642e735e2e29984590d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Account Simulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Account Simulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

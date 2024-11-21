@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dZPM8fq6Fqk=",
+  "dgSpecHash": "0c89U0kIsik=",
   "success": true,
-  "projectFilePath": "C:\\Users\\l\\Documents\\GitHub\\Coding-Zone\\C# Advanced\\Account Simulator\\Account Simulator\\Account Simulator.csproj",
+  "projectFilePath": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Account Simulator\\Account Simulator\\Account Simulator.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\l\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
-    "C:\\Users\\l\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\l\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+    "C:\\Users\\RAQIIS COMPUTER\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\RAQIIS COMPUTER\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\RAQIIS COMPUTER\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

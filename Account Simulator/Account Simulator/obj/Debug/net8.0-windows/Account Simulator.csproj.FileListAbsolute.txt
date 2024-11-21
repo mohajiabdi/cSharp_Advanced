@@ -21,3 +21,26 @@ C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Account Simulator\Account Si
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.pdb
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.genruntimeconfig.cache
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\ref\Account Simulator.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Account Simulator.exe
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Account Simulator.deps.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Account Simulator.runtimeconfig.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Account Simulator.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Account Simulator.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.csproj.AssemblyReference.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account_Simulator.Form1.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account_Simulator.Properties.Resources.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.csproj.GenerateResource.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.AssemblyInfoInputs.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.AssemblyInfo.cs
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.csproj.CoreCompileInputs.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.sourcelink.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account .1F49BEC3.Up2Date
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\refint\Account Simulator.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\Account Simulator.genruntimeconfig.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Account Simulator\Account Simulator\obj\Debug\net8.0-windows\ref\Account Simulator.dll

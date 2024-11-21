@@ -31,3 +31,20 @@ C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Class Inheritance\Class Inhe
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.pdb
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.genruntimeconfig.cache
 C:\Users\l\Documents\GitHub\Coding-Zone\C# Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\ref\Class Inheritance.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\bin\Debug\net8.0-windows\Class Inheritance.exe
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\bin\Debug\net8.0-windows\Class Inheritance.deps.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\bin\Debug\net8.0-windows\Class Inheritance.runtimeconfig.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\bin\Debug\net8.0-windows\Class Inheritance.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\bin\Debug\net8.0-windows\Class Inheritance.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class_Inheritance.Form1.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.csproj.GenerateResource.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.AssemblyInfoInputs.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.AssemblyInfo.cs
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.csproj.CoreCompileInputs.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.sourcelink.json
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\refint\Class Inheritance.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\Class Inheritance.genruntimeconfig.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Class Inheritance\Class Inheritance\obj\Debug\net8.0-windows\ref\Class Inheritance.dll
