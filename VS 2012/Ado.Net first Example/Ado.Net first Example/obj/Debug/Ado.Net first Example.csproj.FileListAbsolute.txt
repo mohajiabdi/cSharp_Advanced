@@ -1,0 +1,10 @@
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\bin\Debug\Ado.Net first Example.exe.config
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\bin\Debug\Ado.Net first Example.exe
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\bin\Debug\Ado.Net first Example.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.csprojResolveAssemblyReference.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net_first_Example.Form1.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net_first_Example.Properties.Resources.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.csproj.GenerateResource.Cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.exe
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net_first_Example.Form2.resources
