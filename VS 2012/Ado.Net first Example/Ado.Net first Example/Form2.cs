@@ -30,16 +30,11 @@ namespace Ado.Net_first_Example
         private void clearData() {
             txtName.Text = "";
             txtAddress.Text = "";
+            txtNameUpdate.Text = "";
             dateDob.ShowUpDown = false;
             comboChoose.Focus();
             //comboChoose.SelectedIndex = 0;
             comboNames.Items.Clear();
-
-
-
-
-
-
         }
 
 

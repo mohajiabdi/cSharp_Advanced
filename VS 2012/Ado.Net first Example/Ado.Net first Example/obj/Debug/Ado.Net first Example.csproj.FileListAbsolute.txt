@@ -8,3 +8,4 @@ C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ad
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.exe
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net first Example.pdb
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\obj\Debug\Ado.Net_first_Example.Form2.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\VS 2012\Ado.Net first Example\Ado.Net first Example\bin\Debug\Guna.UI2.dll

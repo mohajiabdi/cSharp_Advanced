@@ -1,0 +1,11 @@
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.exe.config
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.exe
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.pdb
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Guna.UI2.dll
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Form1.resources
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Properties.Resources.resources
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csproj.GenerateResource.cache
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.exe
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.pdb
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Form2.resources
+C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csprojResolveAssemblyReference.cache
