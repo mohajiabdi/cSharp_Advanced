@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{6220D2D7-6AEA-479A-A0E3-42126FA0D773}|Ado.Net Second Example\\Ado.Net Second Example.csproj|solutionrelative:ado.net second example\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6220D2D7-6AEA-479A-A0E3-42126FA0D773}|Ado.Net Second Example\\Ado.Net Second Example.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\ado.net second example\\ado.net second example\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6220D2D7-6AEA-479A-A0E3-42126FA0D773}|Ado.Net Second Example\\Ado.Net Second Example.csproj|solutionrelative:ado.net second example\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6220D2D7-6AEA-479A-A0E3-42126FA0D773}|Ado.Net Second Example\\Ado.Net Second Example.csproj|C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\ado.net second example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6220D2D7-6AEA-479A-A0E3-42126FA0D773}|Ado.Net Second Example\\Ado.Net Second Example.csproj|solutionrelative:ado.net second example\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -26,11 +30,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\Ado.Net Second Example\\Form3.cs",
+              "RelativeDocumentMoniker": "Ado.Net Second Example\\Form3.cs",
+              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\Ado.Net Second Example\\Form3.cs [Design]",
+              "RelativeToolTip": "Ado.Net Second Example\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T11:07:27.408Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\Ado.Net Second Example\\Form2.cs",
               "RelativeDocumentMoniker": "Ado.Net Second Example\\Form2.cs",
@@ -55,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\Ado.Net Second Example\\Form1.cs",
               "RelativeDocumentMoniker": "Ado.Net Second Example\\Form1.cs",
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Ado.Net Second Example\\Ado.Net Second Example\\Form1.cs",
               "RelativeDocumentMoniker": "Ado.Net Second Example\\Form1.cs",
