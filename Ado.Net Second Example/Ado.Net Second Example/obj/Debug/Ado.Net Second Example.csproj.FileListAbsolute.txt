@@ -12,13 +12,11 @@ C:\Users\RAQIIS COMPUTER\source\repos\Ado.Net Second Example\Ado.Net Second Exam
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.exe.config
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.exe
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\bin\Debug\Ado.Net Second Example.pdb
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csproj.AssemblyReference.cache
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Form1.resources
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Form2.resources
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Form3.resources
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net_Second_Example.Properties.Resources.resources
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csproj.GenerateResource.cache
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csproj.CoreCompileInputs.cache
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net .9716440F.Up2Date
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.exe
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Ado.Net Second Example\Ado.Net Second Example\obj\Debug\Ado.Net Second Example.csprojResolveAssemblyReference.cache

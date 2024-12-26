@@ -43,12 +43,12 @@
             this.comboChoose = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnShow = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateDob = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comboNames = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnQuit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dateDob = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -263,22 +263,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // dateDob
-            // 
-            this.dateDob.CheckedState.Parent = this.dateDob;
-            this.dateDob.FillColor = System.Drawing.Color.White;
-            this.dateDob.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateDob.HoverState.Parent = this.dateDob;
-            this.dateDob.Location = new System.Drawing.Point(260, 243);
-            this.dateDob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateDob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateDob.Name = "dateDob";
-            this.dateDob.ShadowDecoration.Parent = this.dateDob;
-            this.dateDob.Size = new System.Drawing.Size(321, 36);
-            this.dateDob.TabIndex = 5;
-            this.dateDob.Value = new System.DateTime(2024, 12, 15, 21, 9, 35, 455);
-            // 
             // comboNames
             // 
             this.comboNames.BackColor = System.Drawing.Color.Transparent;
@@ -374,6 +358,22 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
+            // dateDob
+            // 
+            this.dateDob.CheckedState.Parent = this.dateDob;
+            this.dateDob.FillColor = System.Drawing.Color.White;
+            this.dateDob.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateDob.HoverState.Parent = this.dateDob;
+            this.dateDob.Location = new System.Drawing.Point(260, 243);
+            this.dateDob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateDob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateDob.Name = "dateDob";
+            this.dateDob.ShadowDecoration.Parent = this.dateDob;
+            this.dateDob.Size = new System.Drawing.Size(321, 36);
+            this.dateDob.TabIndex = 5;
+            this.dateDob.Value = new System.DateTime(2024, 12, 15, 21, 9, 35, 455);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,11 +424,11 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnExit;
         private Guna.UI2.WinForms.Guna2GradientButton btnShow;
         private Guna.UI2.WinForms.Guna2ComboBox comboChoose;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dateDob;
         private Guna.UI2.WinForms.Guna2ComboBox comboNames;
         private Guna.UI2.WinForms.Guna2GradientButton btnQuit;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateDob;
     }
 }

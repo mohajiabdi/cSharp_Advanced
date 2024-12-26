@@ -24,12 +24,14 @@ namespace Project_Management_System
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }
