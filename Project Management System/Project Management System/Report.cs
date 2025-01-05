@@ -25,10 +25,13 @@ namespace Project_Management_System
 
         private void Report_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pharmacyDataSet1.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.pharmacyDataSet1.Customers);
             btnReportMngmt.IconColor = System.Drawing.Color.Coral;
             btnReportMngmt.ForeColor = System.Drawing.Color.Coral;
 
-            Getreport();
+            
+            this.reportViewer1.RefreshReport();
 
 
 
@@ -53,6 +56,8 @@ namespace Project_Management_System
 
             //---------------------------------------------------
 
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
 
@@ -327,12 +332,28 @@ namespace Project_Management_System
 
         private void btnSearchMngmt_Click(object sender, EventArgs e)
         {
-            settingsBtn();
+            SearchBtn();
         }
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            SearchBtn();
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Additional admin-specific UI elements can be displayed here
+                settingsBtn();
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                MessageBox.Show("You don't have Previlege to access Users Settings", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
@@ -350,7 +371,7 @@ namespace Project_Management_System
 
         //Methods 
 
-        private void Getreport(string value = "")
+        private void GetreportCustomers(string value = "")
         {
             SqlDataAdapter Da = new SqlDataAdapter();
             DataSet Ds = new DataSet();
@@ -359,13 +380,13 @@ namespace Project_Management_System
             if (value == "")
                 query = "select * from Customers";
             else
-                query = "select * from teachers where CustomerName like '%" + value + "%'";
+                query = "select * from Customers where CustomerName like '%" + value + "%'";
             using (Da = new SqlDataAdapter(query, connectionString))
             {
                 try
                 {
                     Ds = new DataSet();
-                    Da.Fill(Ds, "teachers");
+                    Da.Fill(Ds, "Customers");
                     ReportDataSource source = new ReportDataSource("DataSet1", Ds.Tables[0]);
                     string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
                         "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
@@ -381,5 +402,42 @@ namespace Project_Management_System
             }
         }
 
+        private void GetreportMedicine(string value = "")
+        {
+            SqlDataAdapter Da = new SqlDataAdapter();
+            DataSet Ds = new DataSet();
+
+            string query = "";
+            if (value == "")
+                query = "select * from Medicines";
+            else
+                query = "select * from Medicines where Name like '%" + value + "%'";
+            using (Da = new SqlDataAdapter(query, connectionString))
+            {
+                try
+                {
+                    Ds = new DataSet();
+                    Da.Fill(Ds, "Medicines");
+                    ReportDataSource source = new ReportDataSource("DataSet1", Ds.Tables[0]);
+                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
+                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
+                    reportViewer1.LocalReport.ReportPath = reportPath;
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.DataSources.Add(source);
+                    reportViewer1.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error", ex.Message);
+                }
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(comboChoose.SelectedIndex == 0) { 
+                GetreportCustomers(txtSearch.Text);
+            }
+        }
     }
 }
