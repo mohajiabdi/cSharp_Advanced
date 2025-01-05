@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -283,7 +284,15 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+
+
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
+
 
         private void btnDashboardMngmt_Click(object sender, EventArgs e)
         {
@@ -328,6 +337,139 @@ namespace Project_Management_System
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit ();
+        }
+
+
+
+        // Method to Add a new user
+        public void AddUser(string username, string password, string role)
+        {
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO UserDt (Username, Password, Role) VALUES (@Username, @Password, @Role)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Role", role);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Method to Update an existing user's details
+        public void UpdateUser(int userId, string username, string password, string role)
+        {
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE UserDt SET Username = @Username, Password = @Password, Role = @Role WHERE UserID = @UserID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Role", role);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Method to Delete a user by their ID
+        public void DeleteUser(int userId)
+        {
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM UserDt WHERE UserID = @UserID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Method to check if a user exists by username (optional, useful for validation)
+        public bool UserExists(string username)
+        {
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM UserDt WHERE Username = @Username";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+
+            string username = txtUserName.Text.Trim();
+            string password = txtPassword.Text;
+            string role = comboRole.SelectedItem?.ToString();
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            string query = "INSERT INTO UserDt (Username, Password, Role) VALUES (@Username, @Password, @Role)";
+
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Role", role);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registration failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        if (ex.Number == 2627) // Unique constraint error
+                        {
+                            MessageBox.Show("Username already exists. Please choose another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
     }
 }

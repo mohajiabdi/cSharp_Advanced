@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Project_Management_System
 {
@@ -21,6 +22,25 @@ namespace Project_Management_System
         {
             InitializeComponent();
 
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
+
             this.Load += Sales_Load;
             InitializeCartGrid();
         }
@@ -29,6 +49,12 @@ namespace Project_Management_System
         {
             btnSalesMngmt.IconColor = System.Drawing.Color.Coral;
             btnSalesMngmt.ForeColor = System.Drawing.Color.Coral;
+
+
+            //-----------------------------------------------------------
+            txtMedicineName.ReadOnly = true;
+            txtPricePerUnit.ReadOnly = true;
+            txtTotalPrice.ReadOnly = true;
 
 
             //----------------------------------------------------------
@@ -292,6 +318,12 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+           
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
 
         private void btnDashboardMngmt_Click(object sender, EventArgs e)
@@ -558,6 +590,13 @@ namespace Project_Management_System
                 return;
             }
 
+            int medicineID;
+            if (!int.TryParse(txtMedicineID.Text, out medicineID))
+            {
+                MessageBox.Show("Medicine ID must be a valid number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             int quantity;
             if (!int.TryParse(txtQuantity.Text, out quantity) || quantity <= 0)
             {
@@ -572,17 +611,64 @@ namespace Project_Management_System
                 return;
             }
 
-            decimal totalPrice = quantity * pricePerUnit;
+            // Check stock availability from the database
+            int availableStock = GetAvailableStock(medicineID);
+            if (quantity > availableStock)
+            {
+                MessageBox.Show($"Not enough stock available! Only {availableStock} left.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            decimal totalPrice = quantity * pricePerUnit;
 
             dgvCart.Rows.Add(txtMedicineID.Text, txtMedicineName.Text, quantity, pricePerUnit.ToString("0.00"), totalPrice.ToString("0.00"));
             totalSaleAmount += totalPrice;
             txtTotalPrice.Text = totalSaleAmount.ToString("0.00");
 
-            //ClearMedicineFields();
+            // Clear input fields
             txtMedicineID.Text = string.Empty;
+            txtQuantity.Text = string.Empty;
             txtMedicineID.Focus();
         }
+
+        // Method to fetch available stock from the database
+        private int GetAvailableStock(int medicineID)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+
+            int stock = 0;
+            //string connectionString = "conString";
+            string query = "SELECT Quantity FROM Medicines WHERE MedicineID = @MedicineID";
+
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MedicineID", medicineID);
+
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            stock = Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No matching medicine found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            return stock;
+        }
+
+
 
         private void btnRemoveFromCart_Click_1(object sender, EventArgs e)
         {
@@ -670,6 +756,196 @@ namespace Project_Management_System
             }
             txtTotalPrice.Text = string.Empty;
             ClearMedicineFields();
+        }
+
+        private void complete()
+        {
+            if (dgvCart.Rows.Count == 0)
+            {
+                MessageBox.Show("Cart is empty! Add items to proceed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlTransaction transaction = connection.BeginTransaction();
+                try
+                {
+                    // Insert Sale
+                    string insertSaleQuery = "INSERT INTO Sales (CustomerID, TotalAmount) OUTPUT INSERTED.SaleID VALUES (@CustomerID, @TotalAmount)";
+                    SqlCommand saleCommand = new SqlCommand(insertSaleQuery, connection, transaction);
+                    saleCommand.Parameters.AddWithValue("@CustomerID", string.IsNullOrWhiteSpace(txtCustomerID.Text) ? (object)DBNull.Value : Convert.ToInt32(txtCustomerID.Text));
+                    saleCommand.Parameters.AddWithValue("@TotalAmount", totalSaleAmount);
+
+                    int saleID = (int)saleCommand.ExecuteScalar();
+
+                    // Insert Sale Details
+                    foreach (DataGridViewRow row in dgvCart.Rows)
+                    {
+                        if (row.Cells["MedicineID"].Value == DBNull.Value ||
+                            row.Cells["Quantity"].Value == DBNull.Value ||
+                            row.Cells["PricePerUnit"].Value == DBNull.Value)
+                        {
+                            MessageBox.Show("Invalid data in cart. Please check and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            transaction.Rollback();
+                            return; // Exit the method if any cell value is invalid
+                        }
+
+                        int medicineID = Convert.ToInt32(row.Cells["MedicineID"].Value);
+                        int saleQuantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                        // Check available quantity
+                        string checkQuantityQuery = "SELECT Quantity FROM Medicines WHERE MedicineID = @MedicineID";
+                        using (SqlCommand checkQuantityCommand = new SqlCommand(checkQuantityQuery, connection, transaction))
+                        {
+                            checkQuantityCommand.Parameters.AddWithValue("@MedicineID", medicineID);
+                            object result = checkQuantityCommand.ExecuteScalar();
+
+                            if (result == null)
+                            {
+                                MessageBox.Show($"Medicine with ID {medicineID} not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                transaction.Rollback();
+                                return;
+                            }
+
+                            int availableQuantity = Convert.ToInt32(result);
+                            if (availableQuantity < saleQuantity)
+                            {
+                                MessageBox.Show($"Not enough stock for Medicine ID {medicineID}. Available: {availableQuantity}, Requested: {saleQuantity}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                transaction.Rollback();
+                                return;
+                            }
+                        }
+
+                        // Insert sale detail and update stock
+                        string insertDetailQuery = @"
+                INSERT INTO SalesDetails (SaleID, MedicineID, Quantity, Price)
+                VALUES (@SaleID, @MedicineID, @Quantity, @Price);
+                UPDATE Medicines SET Quantity = Quantity - @Quantity WHERE MedicineID = @MedicineID";
+
+                        using (SqlCommand detailCommand = new SqlCommand(insertDetailQuery, connection, transaction))
+                        {
+                            detailCommand.Parameters.AddWithValue("@SaleID", saleID);
+                            detailCommand.Parameters.AddWithValue("@MedicineID", medicineID);
+                            detailCommand.Parameters.AddWithValue("@Quantity", saleQuantity);
+                            detailCommand.Parameters.AddWithValue("@Price", Convert.ToDecimal(row.Cells["PricePerUnit"].Value));
+                            detailCommand.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Commit the transaction if everything is successful
+                    transaction.Commit();
+                    MessageBox.Show("Sale completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Clear cart and reset fields
+                    dgvCart.Rows.Clear();
+                    txtTotalPrice.Text = "0.00";
+                    totalSaleAmount = 0;
+                    txtMedicineID.Focus();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Error completing sale: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            txtTotalPrice.Text = string.Empty;
+            ClearMedicineFields();
+
+        }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //public decimal GetTotalIncome(DateTime startDate, DateTime endDate)
+        //{
+        //    string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+        //    decimal totalIncome = 0;
+
+        //    // SQL query to calculate total income from Sales and SalesDetails
+        //    string query = @"
+        //SELECT SUM(sd.Quantity * sd.Price) AS TotalIncome
+        //FROM Sales s
+        //INNER JOIN SalesDetails sd ON s.SaleID = sd.SaleID
+        //WHERE s.SaleDate >= @StartDate AND s.SaleDate <= @EndDate";
+
+        //    try
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(conString))
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand(query, conn))
+        //            {
+        //                // Add parameters for date filtering
+        //                cmd.Parameters.AddWithValue("@StartDate", startDate);
+        //                cmd.Parameters.AddWithValue("@EndDate", endDate);
+
+        //                conn.Open();
+
+        //                // Execute the query and get the result
+        //                object result = cmd.ExecuteScalar();
+        //                if (result != DBNull.Value)
+        //                {
+        //                    totalIncome = Convert.ToDecimal(result);
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+
+        //    return totalIncome;
+        //}
+
+        public decimal GetTotalIncome()
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            decimal totalIncome = 0;
+
+
+            // SQL query to calculate total income from Sales and SalesDetails
+            string query = @"
+     SELECT SUM(sd.Quantity * sd.Price) AS TotalIncome
+     FROM Sales s
+     INNER JOIN SalesDetails sd ON s.SaleID = sd.SaleID"; 
+
+           
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                       
+
+                        conn.Open();
+
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            totalIncome = Convert.ToDecimal(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return totalIncome;
+        }
+
+        private void btnSearchMngmt_Click(object sender, EventArgs e)
+        {
+            SearchBtn();
         }
     }
 }

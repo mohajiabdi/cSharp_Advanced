@@ -18,8 +18,43 @@ namespace Project_Management_System
         {
             InitializeComponent();
 
+            comboChoose.Items.Clear();
+            comboChoose.Items.Add("Choose");
+            comboChoose.Items.Add("New Medicine");
+            comboChoose.Items.Add("Update Medicine");
+            comboChoose.Items.Add("Delete Medicine");
+            comboChoose.SelectedIndex = 1;
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                comboChoose.Items.Clear();
+                comboChoose.Items.Add("Choose");
+                comboChoose.Items.Add("New Medicine");
+                comboChoose.Items.Add("Update Medicine");
+                comboChoose.Items.Add("Delete Medicine");
+                comboChoose.SelectedIndex = 1;
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                comboChoose.Items.Clear();
+                comboChoose.Items.Add("Choose");
+                comboChoose.Items.Add("New Medicine");
              
-            comboChoose.SelectedIndex = 0;
+                comboChoose.SelectedIndex = 1;
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+
+            }
 
 
 
@@ -345,9 +380,14 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+            
+            
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
-
-
 
 
         //---------------------------------------------------------------------------------------------------------------
@@ -521,6 +561,20 @@ namespace Project_Management_System
                 return;
             }
 
+
+            // CHecks is quantity input is Positive
+            if (quantity < 0)
+            {
+
+                MessageBox.Show("Please ensure Quantity must be a valid Positive Integer.",
+                                "Input Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                                txtQuantity.Focus();
+                return;
+
+            }
+
             // Add medicine
             try
             {
@@ -563,6 +617,18 @@ namespace Project_Management_System
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
                 return;
+            }
+            // CHecks is quantity input is Positive
+            if (quantity < 0)
+            {
+
+                MessageBox.Show("Please ensure Quantity must be a valid Positive Integer.",
+                                "Input Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                                txtQuantity.Focus();
+                return;
+
             }
 
             // Update medicine
@@ -663,55 +729,132 @@ namespace Project_Management_System
 
         private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboChoose.SelectedIndex == 0)
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
             {
-                clearData();
-                txtId.Visible = false;
-                lblId.Visible = false;
-                btnRetrieve.Visible = false;
-                btnSave.Visible = true;
-                btnUpdate.Visible = false;
-                btnDelete.Visible = false;
-                txtName.Focus();
                
+                // Additional admin-specific UI elements can be displayed here
+
+
+
+                if (comboChoose.SelectedIndex == 0)
+                {
+                    comboChoose.Items.Clear();
+                    comboChoose.Items.Add("Choose");
+                    comboChoose.Items.Add("New Medicine");
+                    comboChoose.Items.Add("Update Medicine");
+                    comboChoose.Items.Add("Delete Medicine");
+                    clearData();
+                    comboChoose.SelectedIndex = 1;
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
+                if (comboChoose.SelectedIndex == 1)
+                {
+                   
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
+                if (comboChoose.SelectedIndex == 2)
+                {
+                    clearData();
+                    txtId.Visible = true;
+                    lblId.Visible = true;
+                    btnRetrieve.Visible = true;
+                    btnSave.Visible = false;
+                    btnUpdate.Visible = true;
+                    btnDelete.Visible = false;
+
+                    txtId.Focus();
+
+
+                }
+                if (comboChoose.SelectedIndex == 3)
+                {
+                    clearData();
+                    txtId.Visible = true;
+                    lblId.Visible = true;
+                    btnRetrieve.Visible = true;
+                    btnSave.Visible = false;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = true;
+                    //------------------
+                    txtName.ReadOnly = true;
+                    txtManufacturer.ReadOnly = true;
+                    txtPrice.ReadOnly = true;
+                    txtQuantity.ReadOnly = true;
+                    dateDob.Enabled = false;
+
+                    txtId.Focus();
+
+
+
+                }
+
+
+
             }
 
-
-            if (comboChoose.SelectedIndex == 1) 
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
             {
-                clearData();
-                txtId.Visible = true;
-                lblId.Visible = true;
-                btnRetrieve.Visible = true;
-                btnSave.Visible = false;
-                btnUpdate.Visible = true;
-                btnDelete.Visible = false;
-
-                txtId.Focus();
-             
-
-            }
-            if (comboChoose.SelectedIndex == 2) 
-            {
-                clearData();
-                txtId.Visible = true;
-                lblId.Visible = true;
-                btnRetrieve.Visible = true;
-                btnSave.Visible = false;
-                btnUpdate.Visible = false;
-                btnDelete.Visible = true;
-                //------------------
-                txtName.ReadOnly = true;
-                txtManufacturer.ReadOnly = true;
-                txtPrice.ReadOnly = true;
-                txtQuantity.ReadOnly = true;
-                dateDob.Enabled = false;
-
-                txtId.Focus ();
+                
+                // Additional admin-specific UI elements can be displayed here
+               
               
+                if (comboChoose.SelectedIndex == 0)
+                {
+                    comboChoose.Items.Clear();
+                    comboChoose.Items.Add("Choose");
+                    comboChoose.Items.Add("New Medicine");
+                    clearData();
+                    comboChoose.SelectedIndex = 1;
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+                if (comboChoose.SelectedIndex == 1)
+                {
+                   
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
+
 
 
             }
+
+
+           
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

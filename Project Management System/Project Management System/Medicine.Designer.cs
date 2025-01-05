@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicine));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelMenue = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogoutMngmt = new FontAwesome.Sharp.IconButton();
@@ -69,6 +69,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.medicinesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnStaffRole = new FontAwesome.Sharp.IconButton();
+            this.btnAdminRole = new FontAwesome.Sharp.IconButton();
             this.panelMenue.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -398,7 +400,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto Black", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(139, 16);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(184, 11);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(197, 32);
             this.guna2HtmlLabel8.TabIndex = 55;
@@ -639,10 +641,6 @@
             this.comboChoose.FormattingEnabled = true;
             this.comboChoose.HoverState.Parent = this.comboChoose;
             this.comboChoose.ItemHeight = 30;
-            this.comboChoose.Items.AddRange(new object[] {
-            "New Medicine",
-            "Update Medicine",
-            "Delete Medicine"});
             this.comboChoose.ItemsAppearance.Parent = this.comboChoose;
             this.comboChoose.Location = new System.Drawing.Point(137, 76);
             this.comboChoose.Name = "comboChoose";
@@ -687,31 +685,31 @@
             // 
             // medicinesDataGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.medicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.medicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.medicinesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.medicinesDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.medicinesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.medicinesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.medicinesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicinesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medicinesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.medicinesDataGridView.ColumnHeadersHeight = 25;
             this.medicinesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medicinesDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.medicinesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.medicinesDataGridView.EnableHeadersVisualStyles = false;
             this.medicinesDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
             this.medicinesDataGridView.Location = new System.Drawing.Point(239, 454);
@@ -745,11 +743,53 @@
             this.medicinesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             this.medicinesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // btnStaffRole
+            // 
+            this.btnStaffRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnStaffRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStaffRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnStaffRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffRole.ForeColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnStaffRole.IconColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStaffRole.IconSize = 30;
+            this.btnStaffRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnStaffRole.Name = "btnStaffRole";
+            this.btnStaffRole.Size = new System.Drawing.Size(104, 55);
+            this.btnStaffRole.TabIndex = 34;
+            this.btnStaffRole.Text = "Staff";
+            this.btnStaffRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaffRole.UseVisualStyleBackColor = false;
+            // 
+            // btnAdminRole
+            // 
+            this.btnAdminRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnAdminRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnAdminRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminRole.ForeColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAdminRole.IconColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdminRole.IconSize = 30;
+            this.btnAdminRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnAdminRole.Name = "btnAdminRole";
+            this.btnAdminRole.Size = new System.Drawing.Size(104, 55);
+            this.btnAdminRole.TabIndex = 33;
+            this.btnAdminRole.Text = "Admin";
+            this.btnAdminRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdminRole.UseVisualStyleBackColor = false;
+            // 
             // Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 768);
+            this.Controls.Add(this.btnStaffRole);
+            this.Controls.Add(this.btnAdminRole);
             this.Controls.Add(this.medicinesDataGridView);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.panelMenue);
@@ -810,5 +850,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2DataGridView medicinesDataGridView;
         private Guna.UI2.WinForms.Guna2Button btnRetrieve;
+        private FontAwesome.Sharp.IconButton btnStaffRole;
+        private FontAwesome.Sharp.IconButton btnAdminRole;
     }
 }

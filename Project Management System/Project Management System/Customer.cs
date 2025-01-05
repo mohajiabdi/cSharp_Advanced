@@ -17,7 +17,44 @@ namespace Project_Management_System
         {
             InitializeComponent();
 
-            comboChoose.SelectedIndex = 0;
+
+            comboChoose.Items.Clear();
+            comboChoose.Items.Add("Choose");
+            comboChoose.Items.Add("New Customer");
+            comboChoose.Items.Add("Update Customer");
+            comboChoose.Items.Add("Delete Customer");
+            comboChoose.SelectedIndex = 1;
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                comboChoose.Items.Clear();
+                comboChoose.Items.Add("Choose");
+                comboChoose.Items.Add("New Customer");
+                comboChoose.Items.Add("Update Customer");
+                comboChoose.Items.Add("Delete Customer");
+                comboChoose.SelectedIndex = 1;
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                comboChoose.Items.Clear();
+                comboChoose.Items.Add("Choose");
+                comboChoose.Items.Add("New Customer");
+         
+                comboChoose.SelectedIndex = 1;
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
+
 
             this.Load += Customer_Load;
         }
@@ -294,6 +331,10 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+
+            MessageBox.Show("You Are Logged Out!!");
+            new Login().Show();
+            this.Hide();
         }
 
 
@@ -495,6 +536,7 @@ namespace Project_Management_System
 
             try
             {
+                //txtPhone.PasswordChar = '*';
                 AddCustomer(txtName.Text, txtPhone.Text);
                 MessageBox.Show("Customer added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshCustomerGrid();
@@ -561,53 +603,121 @@ namespace Project_Management_System
 
         private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboChoose.SelectedIndex == 0)
+          
+            
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
             {
-                clearData();
-                txtId.Visible = false;
-                lblId.Visible = false;
-                btnRetrieve.Visible = false;
-                btnSave.Visible = true;
-                btnUpdate.Visible = false;
-                btnDelete.Visible = false;
-                txtName.Focus();
+
+                // Additional admin-specific UI elements can be displayed here
+                if (comboChoose.SelectedIndex == 0)
+                {
+                    comboChoose.Items.Clear();
+                    comboChoose.Items.Add("Choose");
+                    comboChoose.Items.Add("New Customer");
+                    comboChoose.Items.Add("Update Customer");
+                    comboChoose.Items.Add("Delete Customer");
+                    comboChoose.SelectedIndex = 1;
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+                if (comboChoose.SelectedIndex == 1)
+                {
+                   
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
+
+                if (comboChoose.SelectedIndex == 2)
+                {
+                    clearData();
+                    txtId.Visible = true;
+                    lblId.Visible = true;
+                    btnRetrieve.Visible = true;
+                    btnSave.Visible = false;
+                    btnUpdate.Visible = true;
+                    btnDelete.Visible = false;
+
+                    txtId.Focus();
+
+
+                }
+                if (comboChoose.SelectedIndex == 3)
+                {
+                    clearData();
+                    txtId.Visible = true;
+                    lblId.Visible = true;
+                    btnRetrieve.Visible = true;
+                    btnSave.Visible = false;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = true;
+                    //------------------
+                    txtName.ReadOnly = true;
+                    txtPhone.ReadOnly = true;
+
+
+                    txtId.Focus();
+
+
+
+                }
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                if (comboChoose.SelectedIndex == 0)
+                {
+                    comboChoose.Items.Clear();
+                    comboChoose.Items.Add("Choose");
+                    comboChoose.Items.Add("New Customer");
+                   
+                    comboChoose.SelectedIndex = 1;
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+                if (comboChoose.SelectedIndex == 1)
+                {
+
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
 
             }
 
-
-            if (comboChoose.SelectedIndex == 1)
-            {
-                clearData();
-                txtId.Visible = true;
-                lblId.Visible = true;
-                btnRetrieve.Visible = true;
-                btnSave.Visible = false;
-                btnUpdate.Visible = true;
-                btnDelete.Visible = false;
-
-                txtId.Focus();
-
-
-            }
-            if (comboChoose.SelectedIndex == 2)
-            {
-                clearData();
-                txtId.Visible = true;
-                lblId.Visible = true;
-                btnRetrieve.Visible = true;
-                btnSave.Visible = false;
-                btnUpdate.Visible = false;
-                btnDelete.Visible = true;
-                //------------------
-                txtName.ReadOnly = true;
-                txtPhone.ReadOnly = true;
-               
-
-                txtId.Focus();
-
-
-
-            }
         }
 
         private void btnRetrieve_Click(object sender, EventArgs e)

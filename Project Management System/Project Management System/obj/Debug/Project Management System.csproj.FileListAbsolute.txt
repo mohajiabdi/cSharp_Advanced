@@ -1,28 +1,75 @@
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Form1.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Properties.Resources.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.GenerateResource.cache
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Project Management System.exe.config
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Project Management System.exe
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Project Management System.pdb
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Guna.UI2.dll
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.exe
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.pdb
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Form3.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.AssemblyReference.cache
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.CoreCompileInputs.cache
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project .DAE50BD9.Up2Date
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Medicine.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Dashboard.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Customer.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Login.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Report.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Sales.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Search.resources
-C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Settings.resources
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.dll
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.pdb
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.xml
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.AssemblyReference.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Customer.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Dashboard.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Form1.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Login.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Form3.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Medicine.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Properties.Resources.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Report.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Sales.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Search.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project_Management_System.Settings.resources
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.GenerateResource.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.csproj.CoreCompileInputs.cache
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project .DAE50BD9.Up2Date
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.exe
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\obj\Debug\Project Management System.pdb
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\x86\SqlServerSpatial160.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\x64\SqlServerSpatial160.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\RAQIIS COMPUTER\Documents\GitHub\Coding-Zone\cSharp_Advanced\Project Management System\Project Management System\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll

@@ -40,8 +40,8 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panelRegister = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.comboRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnGoLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.txtNameaniga = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
             this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -126,6 +126,7 @@
             this.btnLogin.Size = new System.Drawing.Size(192, 62);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // txtPassword
             // 
@@ -217,8 +218,8 @@
             // panelRegister
             // 
             this.panelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.panelRegister.Controls.Add(this.comboRole);
             this.panelRegister.Controls.Add(this.btnGoLogin);
-            this.panelRegister.Controls.Add(this.txtNameaniga);
             this.panelRegister.Controls.Add(this.guna2HtmlLabel2);
             this.panelRegister.Controls.Add(this.btnRegister);
             this.panelRegister.Controls.Add(this.txtNewPassword);
@@ -231,6 +232,33 @@
             this.panelRegister.ShadowShift = 10;
             this.panelRegister.Size = new System.Drawing.Size(458, 424);
             this.panelRegister.TabIndex = 1;
+            // 
+            // comboRole
+            // 
+            this.comboRole.BackColor = System.Drawing.Color.Transparent;
+            this.comboRole.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.comboRole.BorderRadius = 10;
+            this.comboRole.BorderThickness = 2;
+            this.comboRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboRole.FocusedColor = System.Drawing.Color.Empty;
+            this.comboRole.FocusedState.Parent = this.comboRole;
+            this.comboRole.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.comboRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboRole.FormattingEnabled = true;
+            this.comboRole.HoverState.Parent = this.comboRole;
+            this.comboRole.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.comboRole.IntegralHeight = false;
+            this.comboRole.ItemHeight = 30;
+            this.comboRole.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
+            this.comboRole.ItemsAppearance.Parent = this.comboRole;
+            this.comboRole.Location = new System.Drawing.Point(72, 126);
+            this.comboRole.Name = "comboRole";
+            this.comboRole.ShadowDecoration.Parent = this.comboRole;
+            this.comboRole.Size = new System.Drawing.Size(319, 36);
+            this.comboRole.TabIndex = 26;
             // 
             // btnGoLogin
             // 
@@ -249,35 +277,6 @@
             this.btnGoLogin.TabIndex = 4;
             this.btnGoLogin.Text = "Login";
             this.btnGoLogin.Click += new System.EventHandler(this.btnGoLogin_Click_1);
-            // 
-            // txtNameaniga
-            // 
-            this.txtNameaniga.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txtNameaniga.BorderRadius = 10;
-            this.txtNameaniga.BorderThickness = 2;
-            this.txtNameaniga.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameaniga.DefaultText = "";
-            this.txtNameaniga.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameaniga.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameaniga.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameaniga.DisabledState.Parent = this.txtNameaniga;
-            this.txtNameaniga.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameaniga.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameaniga.FocusedState.Parent = this.txtNameaniga;
-            this.txtNameaniga.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameaniga.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameaniga.HoverState.Parent = this.txtNameaniga;
-            this.txtNameaniga.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtNameaniga.IconLeft")));
-            this.txtNameaniga.Location = new System.Drawing.Point(72, 114);
-            this.txtNameaniga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNameaniga.Name = "txtNameaniga";
-            this.txtNameaniga.PasswordChar = '.';
-            this.txtNameaniga.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtNameaniga.PlaceholderText = "Full Name";
-            this.txtNameaniga.SelectedText = "";
-            this.txtNameaniga.ShadowDecoration.Parent = this.txtNameaniga;
-            this.txtNameaniga.Size = new System.Drawing.Size(319, 48);
-            this.txtNameaniga.TabIndex = 0;
             // 
             // guna2HtmlLabel2
             // 
@@ -305,6 +304,7 @@
             this.btnRegister.Size = new System.Drawing.Size(192, 62);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Create Account";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtNewPassword
             // 
@@ -483,7 +483,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel panelLogin;
         private Guna.UI2.WinForms.Guna2ShadowPanel panelRegister;
         private Guna.UI2.WinForms.Guna2Button btnGoLogin;
-        private Guna.UI2.WinForms.Guna2TextBox txtNameaniga;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
         private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
@@ -495,5 +494,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox comboRole;
     }
 }

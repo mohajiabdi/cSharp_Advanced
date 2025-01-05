@@ -2,19 +2,44 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Project_Management_System
 {
     public partial class Search : Form
     {
+        // Backing Fields
+        string conString = "Data Source=DESKTOP-LK1SELP; Database=Pharmacy; Integrated Security=True";
         public Search()
         {
             InitializeComponent();
+
+
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
 
             this.Load += Search_Load;
         }
@@ -23,6 +48,9 @@ namespace Project_Management_System
         {
             btnSearchMngmt.IconColor = System.Drawing.Color.Coral;
             btnSearchMngmt.ForeColor = System.Drawing.Color.Coral;
+
+            comboChoose.SelectedIndex = 0;
+            comboList.SelectedIndex = 0;
 
 
             //----------------------------------------------------------
@@ -283,6 +311,13 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+          
+            
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
 
         private void btnDashboardMngmt_Click(object sender, EventArgs e)
@@ -328,6 +363,469 @@ namespace Project_Management_System
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+
+
+        // Methods 
+
+
+        // Populate Customer Names in Combo Box
+        private void PopulateCustomerNames()
+        {
+            
+
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT CustomerName FROM Customers Order By CustomerName asc";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    comboList.Items.Clear();
+                    while (reader.Read())
+                    {
+                        comboList.Items.Add(reader["CustomerName"].ToString());
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+
+        // Popluate Customer IDS  in Combo Box
+        private void PopulateCustomerIDs()
+        {
+
+
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT CustomerID FROM Customers Order By CustomerID asc";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    comboList.Items.Clear();
+                    while (reader.Read())
+                    {
+                        comboList.Items.Add(reader["CustomerID"].ToString());
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        // Popluate Customer IDS  in Combo Box
+        private void PopulatePhoneNumber()
+        {
+
+
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT ContactNumber FROM Customers order by CustomerName asc";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    comboList.Items.Clear();
+                    while (reader.Read())
+                    {
+                        comboList.Items.Add(reader["ContactNumber"].ToString());
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        // Popluate Customer IDS  in Combo Box
+        private void PopulateMedicineIDs()
+        {
+
+
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT MedicineID FROM Medicines order by MedicineID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    comboList.Items.Clear();
+                    while (reader.Read())
+                    {
+                        comboList.Items.Add(reader["MedicineID"].ToString());
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        // Popluate Customer IDS  in Combo Box
+        private void PopulateMedicineNames()
+        {
+
+
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT Name FROM Medicines order by Name asc";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    comboList.Items.Clear();
+                    while (reader.Read())
+                    {
+                        comboList.Items.Add(reader["Name"].ToString());
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+
+        //SHowing Customer Info Using only ID
+        private void ShowCustomerUsingID()
+        {
+            
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Customers WHERE CustomerID = @CustomerID";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", int.Parse(comboList.SelectedItem.ToString()));
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading customer data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        //SHowing Customer Info Using only Customer Name
+        private void ShowCustomerUsingName()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Customers WHERE CustomerName = @CustomerName";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerName",comboList.SelectedItem.ToString());
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading customer data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        //SHowing Customer Info Using only Phone Number
+        private void ShowCustomerUsingPhone()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Customers WHERE ContactNumber = @ContactNumber";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ContactNumber", comboList.SelectedItem.ToString());
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading customer data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //SHowing Medicine Info Using only Id
+        private void ShowMediciceUsingID()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Medicines WHERE MedicineID = @MedicineID";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@MedicineID", comboList.SelectedItem.ToString());
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Medicine data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //SHowing Medicine Info Using only Name
+        private void ShowMedicineUsingName()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Medicines WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", comboList.SelectedItem.ToString());
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Medicine: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //SHowing Medicine Info Using only Name
+        private void ShowAllMedicines()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Medicines ";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                       
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Medicine: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //SHowing Medicine Info Using only Name
+        private void ShowAllCustomers()
+        {
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "SELECT * FROM Customers ";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            searchDataGridView.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Medicine: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboChoose.SelectedIndex == 0) { 
+                
+                PopulateCustomerIDs();
+                comboList.SelectedIndex = 0;
+                searchDataGridView.DataSource = "";
+            }
+
+
+
+            if (comboChoose.SelectedIndex == 1) {
+                PopulateCustomerNames();
+                comboList.SelectedIndex = 0;
+                searchDataGridView.DataSource = "";
+            }
+
+            if (comboChoose.SelectedIndex == 2) {
+            
+                PopulatePhoneNumber();
+                comboList.SelectedIndex = 0;
+                searchDataGridView.DataSource = "";
+            }
+            if (comboChoose.SelectedIndex == 3) { 
+                PopulateMedicineIDs();
+                comboList.SelectedIndex = 0;
+                searchDataGridView.DataSource = "";
+            }
+
+            if (comboChoose.SelectedIndex == 4) {
+            
+                PopulateMedicineNames();
+                comboList.SelectedIndex = 0;
+                searchDataGridView.DataSource = "";
+            }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (comboChoose.SelectedIndex == 0)
+            {
+
+               
+                ShowCustomerUsingID();
+            }
+
+
+
+            if (comboChoose.SelectedIndex == 1)
+            {
+                ShowCustomerUsingName();
+            }
+
+            if (comboChoose.SelectedIndex == 2)
+            {
+
+               ShowCustomerUsingPhone();
+            }
+            if (comboChoose.SelectedIndex == 3)
+            {
+               ShowMediciceUsingID();
+            }
+
+            if (comboChoose.SelectedIndex == 4)
+            {
+
+                ShowMedicineUsingName();
+            }
+        }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            if (comboChoose.SelectedIndex == 0)
+            {
+
+
+                ShowAllCustomers();
+            }
+
+
+
+            if (comboChoose.SelectedIndex == 1)
+            {
+                ShowAllCustomers();
+            }
+
+            if (comboChoose.SelectedIndex == 2)
+            {
+
+                ShowAllCustomers();
+            }
+            if (comboChoose.SelectedIndex == 3)
+            {
+                ShowAllMedicines();
+            }
+
+            if (comboChoose.SelectedIndex == 4)
+            {
+
+                ShowAllMedicines();
+            }
         }
     }
 }

@@ -13,6 +13,8 @@ using LiveCharts.Wpf;
 using LiveCharts.Defaults;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
+
 namespace Project_Management_System
 {
     public partial class Dashboard : Form
@@ -26,6 +28,26 @@ namespace Project_Management_System
             LoadSalesData();
             //LoadSalesDataToChart();
 
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
+
+
 
             // Start the animation on form load
             this.Load += Dashboard_Load;
@@ -33,7 +55,7 @@ namespace Project_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            lblTotalIncome.Text = GetTotalIncome().ToString();
 
 
             btnDashboardMngmt.IconColor = System.Drawing.Color.Coral;
@@ -161,6 +183,66 @@ namespace Project_Management_System
         //    {
         //        MessageBox.Show($"Error loading sales data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         //    }
+        //}
+
+
+
+
+
+
+
+        private DataTable GetIncomeData()
+        {
+            DataTable incomeData = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"
+            SELECT 
+                FORMAT(SaleDate, 'yyyy-MM') AS Month, 
+                SUM(TotalAmount) AS TotalIncome
+            FROM Sales
+            GROUP BY FORMAT(SaleDate, 'yyyy-MM')
+            ORDER BY Month";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(incomeData);
+                }
+            }
+
+            return incomeData;
+        }
+
+
+
+
+        //private void LoadIncomeChart()
+        //{
+        //    DataTable incomeData = GetIncomeData();
+
+        //    chartIncome.Series.Clear(); // Clear any existing series
+        //    chartIncome.Titles.Clear();
+
+        //    // Add a title
+        //    chartIncome.Titles.Add("Monthly Income");
+
+        //    // Create a new series
+        //    Series series = new Series("Income")
+        //    {
+        //        ChartType = SeriesChartType.Line // Change to Line for a line chart
+        //    };
+
+        //    foreach (DataRow row in incomeData.Rows)
+        //    {
+        //        string month = row["Month"].ToString();
+        //        decimal totalIncome = Convert.ToDecimal(row["TotalIncome"]);
+
+        //        series.Points.AddXY(month, totalIncome);
+        //    }
+
+        //    chartIncome.Series.Add(series);
         //}
 
 
@@ -398,7 +480,15 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+
+
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
+
 
         private void btnDashboardMngmt_Click(object sender, EventArgs e)
         {
@@ -438,11 +528,81 @@ namespace Project_Management_System
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
         {
             logOutBtn();
+            //Login login = new Login();
+            //login.ShowDialog();
+            //this.Hide();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
+
+
+
+        // 
+        public decimal GetTotalIncome(DateTime? startDate = null, DateTime? endDate = null)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            decimal totalIncome = 0;
+
+
+            // SQL query to calculate total income from Sales and SalesDetails
+            string query = @"
+            SELECT SUM(sd.Quantity * sd.Price) AS TotalIncome
+            FROM Sales s
+            INNER JOIN SalesDetails sd ON s.SaleID = sd.SaleID
+            WHERE 1 = 1"; // Always true to make dynamic filtering easier
+
+            // Add date filters if specified
+            if (startDate.HasValue)
+            {
+                query += " AND s.SaleDate >= @StartDate";
+            }
+            if (endDate.HasValue)
+            {
+                query += " AND s.SaleDate <= @EndDate";
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Add parameters for dynamic date filtering
+                        if (startDate.HasValue)
+                        {
+                            cmd.Parameters.AddWithValue("@StartDate", startDate.Value);
+                        }
+                        if (endDate.HasValue)
+                        {
+                            cmd.Parameters.AddWithValue("@EndDate", endDate.Value);
+                        }
+
+                        conn.Open();
+
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            totalIncome = Convert.ToDecimal(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return totalIncome;
+        }
+
+     
     }
 }
+
+

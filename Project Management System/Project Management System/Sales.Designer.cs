@@ -50,23 +50,25 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.dgvCart = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSearchMedicine = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCompleteSale = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRemoveFromCart = new Guna.UI2.WinForms.Guna2Button();
-            this.txtCustomerID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMedicineName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMedicineID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPricePerUnit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPricePerUnit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMedicineID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMedicineName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnSearchMedicine = new Guna.UI2.WinForms.Guna2Button();
+            this.txtCustomerID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCompleteSale = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRemoveFromCart = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStaffRole = new FontAwesome.Sharp.IconButton();
+            this.btnAdminRole = new FontAwesome.Sharp.IconButton();
             this.panelMenue.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -163,6 +165,7 @@
             this.btnSearchMngmt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchMngmt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearchMngmt.UseVisualStyleBackColor = true;
+            this.btnSearchMngmt.Click += new System.EventHandler(this.btnSearchMngmt_Click);
             // 
             // btnReportMngmt
             // 
@@ -422,176 +425,86 @@
             this.guna2ShadowPanel1.Controls.Add(this.btnSearchMedicine);
             this.guna2ShadowPanel1.Controls.Add(this.txtCustomerID);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(365, 12);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(334, 12);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.guna2ShadowPanel1.ShadowShift = 7;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(871, 409);
             this.guna2ShadowPanel1.TabIndex = 0;
+            this.guna2ShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel1_Paint);
             // 
-            // guna2HtmlLabel8
+            // guna2HtmlLabel5
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto Black", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(352, 20);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(158, 32);
-            this.guna2HtmlLabel8.TabIndex = 55;
-            this.guna2HtmlLabel8.Text = "Sell Medicine";
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(444, 253);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(60, 15);
+            this.guna2HtmlLabel5.TabIndex = 75;
+            this.guna2HtmlLabel5.Text = "Total Price :";
             // 
-            // btnSearchMedicine
+            // guna2HtmlLabel6
             // 
-            this.btnSearchMedicine.BorderRadius = 10;
-            this.btnSearchMedicine.CheckedState.Parent = this.btnSearchMedicine;
-            this.btnSearchMedicine.CustomImages.Parent = this.btnSearchMedicine;
-            this.btnSearchMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.btnSearchMedicine.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMedicine.ForeColor = System.Drawing.Color.White;
-            this.btnSearchMedicine.HoverState.Parent = this.btnSearchMedicine;
-            this.btnSearchMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchMedicine.Image")));
-            this.btnSearchMedicine.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnSearchMedicine.Location = new System.Drawing.Point(235, 337);
-            this.btnSearchMedicine.Name = "btnSearchMedicine";
-            this.btnSearchMedicine.ShadowDecoration.Parent = this.btnSearchMedicine;
-            this.btnSearchMedicine.Size = new System.Drawing.Size(193, 50);
-            this.btnSearchMedicine.TabIndex = 3;
-            this.btnSearchMedicine.Text = "Search";
-            this.btnSearchMedicine.Click += new System.EventHandler(this.btnSearchMedicine_Click);
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(444, 100);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(83, 15);
+            this.guna2HtmlLabel6.TabIndex = 74;
+            this.guna2HtmlLabel6.Text = "Medicine Name :";
             // 
-            // btnCompleteSale
+            // guna2HtmlLabel3
             // 
-            this.btnCompleteSale.BorderRadius = 10;
-            this.btnCompleteSale.CheckedState.Parent = this.btnCompleteSale;
-            this.btnCompleteSale.CustomImages.Parent = this.btnCompleteSale;
-            this.btnCompleteSale.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.btnCompleteSale.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompleteSale.ForeColor = System.Drawing.Color.White;
-            this.btnCompleteSale.HoverState.Parent = this.btnCompleteSale;
-            this.btnCompleteSale.Image = ((System.Drawing.Image)(resources.GetObject("btnCompleteSale.Image")));
-            this.btnCompleteSale.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnCompleteSale.Location = new System.Drawing.Point(829, 696);
-            this.btnCompleteSale.Name = "btnCompleteSale";
-            this.btnCompleteSale.ShadowDecoration.Parent = this.btnCompleteSale;
-            this.btnCompleteSale.Size = new System.Drawing.Size(273, 60);
-            this.btnCompleteSale.TabIndex = 2;
-            this.btnCompleteSale.Text = "Complete Sale";
-            this.btnCompleteSale.Click += new System.EventHandler(this.btnCompleteSale_Click_1);
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(155, 249);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(48, 15);
+            this.guna2HtmlLabel3.TabIndex = 73;
+            this.guna2HtmlLabel3.Text = "Quantity : ";
             // 
-            // btnRemoveFromCart
+            // guna2HtmlLabel4
             // 
-            this.btnRemoveFromCart.BorderRadius = 10;
-            this.btnRemoveFromCart.CheckedState.Parent = this.btnRemoveFromCart;
-            this.btnRemoveFromCart.CustomImages.Parent = this.btnRemoveFromCart;
-            this.btnRemoveFromCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.btnRemoveFromCart.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveFromCart.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveFromCart.HoverState.Parent = this.btnRemoveFromCart;
-            this.btnRemoveFromCart.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveFromCart.Image")));
-            this.btnRemoveFromCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(520, 696);
-            this.btnRemoveFromCart.Name = "btnRemoveFromCart";
-            this.btnRemoveFromCart.ShadowDecoration.Parent = this.btnRemoveFromCart;
-            this.btnRemoveFromCart.Size = new System.Drawing.Size(273, 60);
-            this.btnRemoveFromCart.TabIndex = 1;
-            this.btnRemoveFromCart.Text = "Remove Cart";
-            this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click_1);
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(155, 177);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(67, 15);
+            this.guna2HtmlLabel4.TabIndex = 72;
+            this.guna2HtmlLabel4.Text = "Customer ID :";
             // 
-            // txtCustomerID
+            // guna2HtmlLabel2
             // 
-            this.txtCustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCustomerID.DefaultText = "";
-            this.txtCustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCustomerID.DisabledState.Parent = this.txtCustomerID;
-            this.txtCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerID.FocusedState.Parent = this.txtCustomerID;
-            this.txtCustomerID.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerID.HoverState.Parent = this.txtCustomerID;
-            this.txtCustomerID.Location = new System.Drawing.Point(155, 203);
-            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.PasswordChar = '\0';
-            this.txtCustomerID.PlaceholderText = "Customer ID";
-            this.txtCustomerID.SelectedText = "";
-            this.txtCustomerID.ShadowDecoration.Parent = this.txtCustomerID;
-            this.txtCustomerID.Size = new System.Drawing.Size(273, 36);
-            this.txtCustomerID.TabIndex = 1;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(444, 178);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(74, 15);
+            this.guna2HtmlLabel2.TabIndex = 71;
+            this.guna2HtmlLabel2.Text = "Price Per Unit :";
             // 
-            // txtMedicineName
+            // guna2HtmlLabel1
             // 
-            this.txtMedicineName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMedicineName.DefaultText = "";
-            this.txtMedicineName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMedicineName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMedicineName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicineName.DisabledState.Parent = this.txtMedicineName;
-            this.txtMedicineName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicineName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicineName.FocusedState.Parent = this.txtMedicineName;
-            this.txtMedicineName.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicineName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicineName.HoverState.Parent = this.txtMedicineName;
-            this.txtMedicineName.Location = new System.Drawing.Point(444, 124);
-            this.txtMedicineName.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.txtMedicineName.Name = "txtMedicineName";
-            this.txtMedicineName.PasswordChar = '\0';
-            this.txtMedicineName.PlaceholderText = "Medicine Name";
-            this.txtMedicineName.SelectedText = "";
-            this.txtMedicineName.ShadowDecoration.Parent = this.txtMedicineName;
-            this.txtMedicineName.Size = new System.Drawing.Size(273, 34);
-            this.txtMedicineName.TabIndex = 58;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(155, 99);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(66, 15);
+            this.guna2HtmlLabel1.TabIndex = 70;
+            this.guna2HtmlLabel1.Text = "Medicine ID :";
             // 
-            // txtQuantity
+            // btnAddToCart
             // 
-            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantity.DefaultText = "";
-            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.DisabledState.Parent = this.txtQuantity;
-            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.FocusedState.Parent = this.txtQuantity;
-            this.txtQuantity.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(155, 272);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.PasswordChar = '\0';
-            this.txtQuantity.PlaceholderText = "Quantity";
-            this.txtQuantity.SelectedText = "";
-            this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(273, 34);
-            this.txtQuantity.TabIndex = 2;
-            // 
-            // txtMedicineID
-            // 
-            this.txtMedicineID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMedicineID.DefaultText = "";
-            this.txtMedicineID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMedicineID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMedicineID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicineID.DisabledState.Parent = this.txtMedicineID;
-            this.txtMedicineID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicineID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicineID.FocusedState.Parent = this.txtMedicineID;
-            this.txtMedicineID.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicineID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicineID.HoverState.Parent = this.txtMedicineID;
-            this.txtMedicineID.Location = new System.Drawing.Point(155, 122);
-            this.txtMedicineID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtMedicineID.Name = "txtMedicineID";
-            this.txtMedicineID.PasswordChar = '\0';
-            this.txtMedicineID.PlaceholderText = "Medicine Id";
-            this.txtMedicineID.SelectedText = "";
-            this.txtMedicineID.ShadowDecoration.Parent = this.txtMedicineID;
-            this.txtMedicineID.Size = new System.Drawing.Size(273, 36);
-            this.txtMedicineID.TabIndex = 0;
+            this.btnAddToCart.BorderRadius = 10;
+            this.btnAddToCart.CheckedState.Parent = this.btnAddToCart;
+            this.btnAddToCart.CustomImages.Parent = this.btnAddToCart;
+            this.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnAddToCart.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.HoverState.Parent = this.btnAddToCart;
+            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
+            this.btnAddToCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAddToCart.Location = new System.Drawing.Point(444, 337);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.ShadowDecoration.Parent = this.btnAddToCart;
+            this.btnAddToCart.Size = new System.Drawing.Size(193, 50);
+            this.btnAddToCart.TabIndex = 4;
+            this.btnAddToCart.Text = "Add Cart";
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click_1);
             // 
             // txtTotalPrice
             // 
@@ -641,84 +554,217 @@
             this.txtPricePerUnit.Size = new System.Drawing.Size(273, 36);
             this.txtPricePerUnit.TabIndex = 67;
             // 
-            // btnAddToCart
+            // txtQuantity
             // 
-            this.btnAddToCart.BorderRadius = 10;
-            this.btnAddToCart.CheckedState.Parent = this.btnAddToCart;
-            this.btnAddToCart.CustomImages.Parent = this.btnAddToCart;
-            this.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.btnAddToCart.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.HoverState.Parent = this.btnAddToCart;
-            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
-            this.btnAddToCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddToCart.Location = new System.Drawing.Point(444, 337);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.ShadowDecoration.Parent = this.btnAddToCart;
-            this.btnAddToCart.Size = new System.Drawing.Size(193, 50);
-            this.btnAddToCart.TabIndex = 4;
-            this.btnAddToCart.Text = "Add Cart";
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click_1);
+            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantity.DefaultText = "";
+            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.DisabledState.Parent = this.txtQuantity;
+            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.FocusedState.Parent = this.txtQuantity;
+            this.txtQuantity.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.HoverState.Parent = this.txtQuantity;
+            this.txtQuantity.Location = new System.Drawing.Point(155, 272);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.PasswordChar = '\0';
+            this.txtQuantity.PlaceholderText = "Quantity";
+            this.txtQuantity.SelectedText = "";
+            this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
+            this.txtQuantity.Size = new System.Drawing.Size(273, 34);
+            this.txtQuantity.TabIndex = 2;
             // 
-            // guna2HtmlLabel1
+            // txtMedicineID
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(155, 99);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(66, 15);
-            this.guna2HtmlLabel1.TabIndex = 70;
-            this.guna2HtmlLabel1.Text = "Medicine ID :";
+            this.txtMedicineID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMedicineID.DefaultText = "";
+            this.txtMedicineID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMedicineID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMedicineID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMedicineID.DisabledState.Parent = this.txtMedicineID;
+            this.txtMedicineID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMedicineID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMedicineID.FocusedState.Parent = this.txtMedicineID;
+            this.txtMedicineID.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicineID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMedicineID.HoverState.Parent = this.txtMedicineID;
+            this.txtMedicineID.Location = new System.Drawing.Point(155, 122);
+            this.txtMedicineID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMedicineID.Name = "txtMedicineID";
+            this.txtMedicineID.PasswordChar = '\0';
+            this.txtMedicineID.PlaceholderText = "Medicine Id";
+            this.txtMedicineID.SelectedText = "";
+            this.txtMedicineID.ShadowDecoration.Parent = this.txtMedicineID;
+            this.txtMedicineID.Size = new System.Drawing.Size(273, 36);
+            this.txtMedicineID.TabIndex = 0;
             // 
-            // guna2HtmlLabel2
+            // txtMedicineName
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(444, 178);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(74, 15);
-            this.guna2HtmlLabel2.TabIndex = 71;
-            this.guna2HtmlLabel2.Text = "Price Per Unit :";
+            this.txtMedicineName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMedicineName.DefaultText = "";
+            this.txtMedicineName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMedicineName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMedicineName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMedicineName.DisabledState.Parent = this.txtMedicineName;
+            this.txtMedicineName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMedicineName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMedicineName.FocusedState.Parent = this.txtMedicineName;
+            this.txtMedicineName.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicineName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMedicineName.HoverState.Parent = this.txtMedicineName;
+            this.txtMedicineName.Location = new System.Drawing.Point(444, 124);
+            this.txtMedicineName.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtMedicineName.Name = "txtMedicineName";
+            this.txtMedicineName.PasswordChar = '\0';
+            this.txtMedicineName.PlaceholderText = "Medicine Name";
+            this.txtMedicineName.SelectedText = "";
+            this.txtMedicineName.ShadowDecoration.Parent = this.txtMedicineName;
+            this.txtMedicineName.Size = new System.Drawing.Size(273, 34);
+            this.txtMedicineName.TabIndex = 58;
             // 
-            // guna2HtmlLabel3
+            // guna2HtmlLabel8
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(155, 249);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(48, 15);
-            this.guna2HtmlLabel3.TabIndex = 73;
-            this.guna2HtmlLabel3.Text = "Quantity : ";
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto Black", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(352, 20);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(158, 32);
+            this.guna2HtmlLabel8.TabIndex = 55;
+            this.guna2HtmlLabel8.Text = "Sell Medicine";
             // 
-            // guna2HtmlLabel4
+            // btnSearchMedicine
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(155, 177);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(67, 15);
-            this.guna2HtmlLabel4.TabIndex = 72;
-            this.guna2HtmlLabel4.Text = "Customer ID :";
+            this.btnSearchMedicine.BorderRadius = 10;
+            this.btnSearchMedicine.CheckedState.Parent = this.btnSearchMedicine;
+            this.btnSearchMedicine.CustomImages.Parent = this.btnSearchMedicine;
+            this.btnSearchMedicine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnSearchMedicine.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnSearchMedicine.HoverState.Parent = this.btnSearchMedicine;
+            this.btnSearchMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchMedicine.Image")));
+            this.btnSearchMedicine.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnSearchMedicine.Location = new System.Drawing.Point(235, 337);
+            this.btnSearchMedicine.Name = "btnSearchMedicine";
+            this.btnSearchMedicine.ShadowDecoration.Parent = this.btnSearchMedicine;
+            this.btnSearchMedicine.Size = new System.Drawing.Size(193, 50);
+            this.btnSearchMedicine.TabIndex = 3;
+            this.btnSearchMedicine.Text = "Search";
+            this.btnSearchMedicine.Click += new System.EventHandler(this.btnSearchMedicine_Click);
             // 
-            // guna2HtmlLabel5
+            // txtCustomerID
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(444, 253);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(60, 15);
-            this.guna2HtmlLabel5.TabIndex = 75;
-            this.guna2HtmlLabel5.Text = "Total Price :";
+            this.txtCustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCustomerID.DefaultText = "";
+            this.txtCustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerID.DisabledState.Parent = this.txtCustomerID;
+            this.txtCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerID.FocusedState.Parent = this.txtCustomerID;
+            this.txtCustomerID.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerID.HoverState.Parent = this.txtCustomerID;
+            this.txtCustomerID.Location = new System.Drawing.Point(155, 203);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.PasswordChar = '\0';
+            this.txtCustomerID.PlaceholderText = "Customer ID";
+            this.txtCustomerID.SelectedText = "";
+            this.txtCustomerID.ShadowDecoration.Parent = this.txtCustomerID;
+            this.txtCustomerID.Size = new System.Drawing.Size(273, 36);
+            this.txtCustomerID.TabIndex = 1;
             // 
-            // guna2HtmlLabel6
+            // btnCompleteSale
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(444, 100);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(83, 15);
-            this.guna2HtmlLabel6.TabIndex = 74;
-            this.guna2HtmlLabel6.Text = "Medicine Name :";
+            this.btnCompleteSale.BorderRadius = 10;
+            this.btnCompleteSale.CheckedState.Parent = this.btnCompleteSale;
+            this.btnCompleteSale.CustomImages.Parent = this.btnCompleteSale;
+            this.btnCompleteSale.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnCompleteSale.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompleteSale.ForeColor = System.Drawing.Color.White;
+            this.btnCompleteSale.HoverState.Parent = this.btnCompleteSale;
+            this.btnCompleteSale.Image = ((System.Drawing.Image)(resources.GetObject("btnCompleteSale.Image")));
+            this.btnCompleteSale.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnCompleteSale.Location = new System.Drawing.Point(829, 696);
+            this.btnCompleteSale.Name = "btnCompleteSale";
+            this.btnCompleteSale.ShadowDecoration.Parent = this.btnCompleteSale;
+            this.btnCompleteSale.Size = new System.Drawing.Size(273, 60);
+            this.btnCompleteSale.TabIndex = 2;
+            this.btnCompleteSale.Text = "Complete Sale";
+            this.btnCompleteSale.Click += new System.EventHandler(this.btnCompleteSale_Click_1);
+            // 
+            // btnRemoveFromCart
+            // 
+            this.btnRemoveFromCart.BorderRadius = 10;
+            this.btnRemoveFromCart.CheckedState.Parent = this.btnRemoveFromCart;
+            this.btnRemoveFromCart.CustomImages.Parent = this.btnRemoveFromCart;
+            this.btnRemoveFromCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnRemoveFromCart.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveFromCart.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveFromCart.HoverState.Parent = this.btnRemoveFromCart;
+            this.btnRemoveFromCart.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveFromCart.Image")));
+            this.btnRemoveFromCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(520, 696);
+            this.btnRemoveFromCart.Name = "btnRemoveFromCart";
+            this.btnRemoveFromCart.ShadowDecoration.Parent = this.btnRemoveFromCart;
+            this.btnRemoveFromCart.Size = new System.Drawing.Size(273, 60);
+            this.btnRemoveFromCart.TabIndex = 1;
+            this.btnRemoveFromCart.Text = "Remove Cart";
+            this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click_1);
+            // 
+            // btnStaffRole
+            // 
+            this.btnStaffRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnStaffRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStaffRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnStaffRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffRole.ForeColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnStaffRole.IconColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStaffRole.IconSize = 30;
+            this.btnStaffRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnStaffRole.Name = "btnStaffRole";
+            this.btnStaffRole.Size = new System.Drawing.Size(104, 55);
+            this.btnStaffRole.TabIndex = 34;
+            this.btnStaffRole.Text = "Staff";
+            this.btnStaffRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaffRole.UseVisualStyleBackColor = false;
+            // 
+            // btnAdminRole
+            // 
+            this.btnAdminRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnAdminRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnAdminRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminRole.ForeColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAdminRole.IconColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdminRole.IconSize = 30;
+            this.btnAdminRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnAdminRole.Name = "btnAdminRole";
+            this.btnAdminRole.Size = new System.Drawing.Size(104, 55);
+            this.btnAdminRole.TabIndex = 33;
+            this.btnAdminRole.Text = "Admin";
+            this.btnAdminRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdminRole.UseVisualStyleBackColor = false;
             // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 768);
+            this.Controls.Add(this.btnStaffRole);
+            this.Controls.Add(this.btnAdminRole);
             this.Controls.Add(this.dgvCart);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.panelMenue);
@@ -779,5 +825,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private FontAwesome.Sharp.IconButton btnStaffRole;
+        private FontAwesome.Sharp.IconButton btnAdminRole;
     }
 }

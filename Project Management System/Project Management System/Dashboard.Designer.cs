@@ -49,6 +49,10 @@
             this.btnDashboardMngmt = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dashboardDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lblTotalIncome = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnAdminRole = new FontAwesome.Sharp.IconButton();
+            this.btnStaffRole = new FontAwesome.Sharp.IconButton();
+            this.lblForIncome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.panelMenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDataGridView)).BeginInit();
@@ -350,13 +354,13 @@
             this.dashboardDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dashboardDataGridView.EnableHeadersVisualStyles = false;
             this.dashboardDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.dashboardDataGridView.Location = new System.Drawing.Point(249, 437);
+            this.dashboardDataGridView.Location = new System.Drawing.Point(249, 248);
             this.dashboardDataGridView.Name = "dashboardDataGridView";
             this.dashboardDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dashboardDataGridView.RowHeadersVisible = false;
             this.dashboardDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dashboardDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dashboardDataGridView.Size = new System.Drawing.Size(1082, 305);
+            this.dashboardDataGridView.Size = new System.Drawing.Size(1082, 494);
             this.dashboardDataGridView.TabIndex = 29;
             this.dashboardDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
             this.dashboardDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
@@ -381,11 +385,79 @@
             this.dashboardDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             this.dashboardDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // lblTotalIncome
+            // 
+            this.lblTotalIncome.AutoSize = false;
+            this.lblTotalIncome.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalIncome.Font = new System.Drawing.Font("Roboto Medium", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.lblTotalIncome.Location = new System.Drawing.Point(586, 58);
+            this.lblTotalIncome.Name = "lblTotalIncome";
+            this.lblTotalIncome.Size = new System.Drawing.Size(290, 122);
+            this.lblTotalIncome.TabIndex = 30;
+            this.lblTotalIncome.Text = null;
+            this.lblTotalIncome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAdminRole
+            // 
+            this.btnAdminRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnAdminRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnAdminRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminRole.ForeColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAdminRole.IconColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdminRole.IconSize = 30;
+            this.btnAdminRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnAdminRole.Name = "btnAdminRole";
+            this.btnAdminRole.Size = new System.Drawing.Size(104, 55);
+            this.btnAdminRole.TabIndex = 31;
+            this.btnAdminRole.Text = "Admin";
+            this.btnAdminRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdminRole.UseVisualStyleBackColor = false;
+            // 
+            // btnStaffRole
+            // 
+            this.btnStaffRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnStaffRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStaffRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnStaffRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffRole.ForeColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnStaffRole.IconColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStaffRole.IconSize = 30;
+            this.btnStaffRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffRole.Location = new System.Drawing.Point(1244, 59);
+            this.btnStaffRole.Name = "btnStaffRole";
+            this.btnStaffRole.Size = new System.Drawing.Size(104, 55);
+            this.btnStaffRole.TabIndex = 32;
+            this.btnStaffRole.Text = "Staff";
+            this.btnStaffRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaffRole.UseVisualStyleBackColor = false;
+            // 
+            // lblForIncome
+            // 
+            this.lblForIncome.BackColor = System.Drawing.Color.Transparent;
+            this.lblForIncome.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForIncome.Location = new System.Drawing.Point(594, 66);
+            this.lblForIncome.Name = "lblForIncome";
+            this.lblForIncome.Size = new System.Drawing.Size(115, 21);
+            this.lblForIncome.TabIndex = 33;
+            this.lblForIncome.Text = "Total Income:";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 768);
+            this.Controls.Add(this.lblForIncome);
+            this.Controls.Add(this.btnStaffRole);
+            this.Controls.Add(this.btnAdminRole);
+            this.Controls.Add(this.lblTotalIncome);
             this.Controls.Add(this.dashboardDataGridView);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2ControlBox2);
@@ -425,5 +497,9 @@
         private Guna.UI2.WinForms.Guna2DataGridView dashboardDataGridView;
         private LiveCharts.Wpf.CartesianChart cartesianChart1;
         private LiveCharts.Wpf.CartesianChart cartesianChart2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalIncome;
+        private FontAwesome.Sharp.IconButton btnAdminRole;
+        private FontAwesome.Sharp.IconButton btnStaffRole;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblForIncome;
     }
 }

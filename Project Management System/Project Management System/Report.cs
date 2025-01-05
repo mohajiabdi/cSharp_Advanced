@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+using System.IO;
 
 namespace Project_Management_System
 {
     public partial class Report : Form
     {
+        // Back Field
+        string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
         public Report()
         {
             InitializeComponent();
@@ -22,6 +27,8 @@ namespace Project_Management_System
         {
             btnReportMngmt.IconColor = System.Drawing.Color.Coral;
             btnReportMngmt.ForeColor = System.Drawing.Color.Coral;
+
+            Getreport();
 
 
 
@@ -284,6 +291,13 @@ namespace Project_Management_System
             btnSearchMngmt.ForeColor = System.Drawing.Color.White;
             btnSettingsMngmt.IconColor = System.Drawing.Color.White;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.White;
+
+
+            MessageBox.Show("You Are Logged Out!!");
+            Login.CurrentUserRole = string.Empty;
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
 
         private void btnDashboardMngmt_Click(object sender, EventArgs e)
@@ -318,7 +332,7 @@ namespace Project_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            settingsBtn();
+            SearchBtn();
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
@@ -330,5 +344,42 @@ namespace Project_Management_System
         {
             Application.Exit();
         }
+
+
+
+
+        //Methods 
+
+        private void Getreport(string value = "")
+        {
+            SqlDataAdapter Da = new SqlDataAdapter();
+            DataSet Ds = new DataSet();
+            
+            string query = "";
+            if (value == "")
+                query = "select * from Customers";
+            else
+                query = "select * from teachers where CustomerName like '%" + value + "%'";
+            using (Da = new SqlDataAdapter(query, connectionString))
+            {
+                try
+                {
+                    Ds = new DataSet();
+                    Da.Fill(Ds, "teachers");
+                    ReportDataSource source = new ReportDataSource("DataSet1", Ds.Tables[0]);
+                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
+                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
+                    reportViewer1.LocalReport.ReportPath = reportPath;
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.DataSources.Add(source);
+                    reportViewer1.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error", ex.Message);
+                }
+            }
+        }
+
     }
 }

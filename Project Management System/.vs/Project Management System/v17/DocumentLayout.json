@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\project management system\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|c:\\users\\raqiis computer\\documents\\github\\coding-zone\\csharp_advanced\\project management system\\project management system\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{414E49E4-EBBD-445D-8324-74A5DF9AC362}|Project Management System\\Project Management System.csproj|solutionrelative:project management system\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,106 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form2.cs",
               "RelativeDocumentMoniker": "Project Management System\\Form2.cs",
               "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form2.cs",
               "RelativeToolTip": "Project Management System\\Form2.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvy4AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAIkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:19:58.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form2.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Form2.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form2.cs [Design]",
-              "RelativeToolTip": "Project Management System\\Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:12:35.388Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form1.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Form1.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Form1.cs [Design]",
-              "RelativeToolTip": "Project Management System\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:12:27.326Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Dashboard.cs",
-              "RelativeToolTip": "Project Management System\\Dashboard.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAYwF4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T19:43:09.788Z",
+              "WhenOpened": "2025-01-05T01:14:57.765Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Dashboard.cs [Design]",
-              "RelativeToolTip": "Project Management System\\Dashboard.cs [Design]",
+              "Title": "Medicine.cs",
+              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Medicine.cs",
+              "RelativeDocumentMoniker": "Project Management System\\Medicine.cs",
+              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Medicine.cs",
+              "RelativeToolTip": "Project Management System\\Medicine.cs",
+              "ViewState": "AgIAABoAAACANTMzM7MQwEEAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T19:42:23.546Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-05T01:10:55.932Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Customer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Customer.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Customer.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Customer.cs [Design]",
-              "RelativeToolTip": "Project Management System\\Customer.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Settings.cs",
+              "RelativeDocumentMoniker": "Project Management System\\Settings.cs",
+              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Settings.cs",
+              "RelativeToolTip": "Project Management System\\Settings.cs",
+              "ViewState": "AgIAAJMBAAAAAAAAAIA3wKsBAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T19:42:58.975Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-05T01:10:30.174Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Sales.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Sales.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Sales.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Sales.cs [Design]",
-              "RelativeToolTip": "Project Management System\\Sales.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Settings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Settings.cs",
+              "RelativeDocumentMoniker": "Project Management System\\Settings.cs",
+              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Settings.cs [Design]",
+              "RelativeToolTip": "Project Management System\\Settings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T11:47:52.62Z",
+              "WhenOpened": "2025-01-05T01:05:15.918Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Sales.cs",
-              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Sales.cs",
-              "RelativeDocumentMoniker": "Project Management System\\Sales.cs",
-              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Sales.cs",
-              "RelativeToolTip": "Project Management System\\Sales.cs",
-              "ViewState": "AgIAAFoBAAAAAAAAAAAAAF4BAAAiAAAAAAAAAA==",
+              "Title": "Medicine.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Medicine.cs",
+              "RelativeDocumentMoniker": "Project Management System\\Medicine.cs",
+              "ToolTip": "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Medicine.cs [Design]",
+              "RelativeToolTip": "Project Management System\\Medicine.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T17:23:20.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T01:04:06.248Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
