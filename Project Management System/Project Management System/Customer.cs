@@ -496,7 +496,8 @@ namespace Project_Management_System
 
         private void btnReportMngmt_Click(object sender, EventArgs e)
         {
-            reportBtn();
+            MessageBox.Show("Its Under Maintenance, We will Fix it Soon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void btnSearchMngmt_Click(object sender, EventArgs e)

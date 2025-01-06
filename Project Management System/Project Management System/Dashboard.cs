@@ -105,7 +105,7 @@ namespace Project_Management_System
                         m.Name AS MedicineName,
                         s.SaleDate,
                         sd.Quantity,
-                        sd.Price * sd.Quantity AS TotalPrice
+                        FORMAT(sd.Price * sd.Quantity, 'C', 'en-US') AS TotalPrice
                     FROM 
                         Sales s
                     LEFT JOIN 
@@ -512,7 +512,7 @@ namespace Project_Management_System
 
         private void btnReportMngmt_Click(object sender, EventArgs e)
         {
-            reportBtn();
+            MessageBox.Show("Its Under Maintenance, We will Fix it Soon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSearchMngmt_Click(object sender, EventArgs e)

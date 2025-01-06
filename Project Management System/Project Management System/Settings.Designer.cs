@@ -48,8 +48,10 @@
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.medicinesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.UserDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblChoose = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.comboRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnRetrieve = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -59,15 +61,13 @@
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboChoose = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.comboRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelMenue.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.medicinesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDataGridView)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -342,15 +342,15 @@
             this.guna2ControlBox1.TabIndex = 23;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
-            // medicinesDataGridView
+            // UserDataGridView
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.medicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.medicinesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.medicinesDataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.medicinesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.medicinesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.medicinesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.UserDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.UserDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UserDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.UserDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.UserDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -358,9 +358,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicinesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.medicinesDataGridView.ColumnHeadersHeight = 25;
-            this.medicinesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.UserDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.UserDataGridView.ColumnHeadersHeight = 25;
+            this.UserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -368,44 +368,44 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medicinesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.medicinesDataGridView.EnableHeadersVisualStyles = false;
-            this.medicinesDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.medicinesDataGridView.Location = new System.Drawing.Point(249, 444);
-            this.medicinesDataGridView.Name = "medicinesDataGridView";
-            this.medicinesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.medicinesDataGridView.RowHeadersVisible = false;
-            this.medicinesDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.medicinesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.medicinesDataGridView.Size = new System.Drawing.Size(1082, 300);
-            this.medicinesDataGridView.TabIndex = 26;
-            this.medicinesDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
-            this.medicinesDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.medicinesDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.medicinesDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.medicinesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.medicinesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.medicinesDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.medicinesDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.medicinesDataGridView.ThemeStyle.HeaderStyle.Height = 25;
-            this.medicinesDataGridView.ThemeStyle.ReadOnly = false;
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.Height = 22;
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            this.medicinesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.UserDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.UserDataGridView.EnableHeadersVisualStyles = false;
+            this.UserDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.UserDataGridView.Location = new System.Drawing.Point(249, 444);
+            this.UserDataGridView.Name = "UserDataGridView";
+            this.UserDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.UserDataGridView.RowHeadersVisible = false;
+            this.UserDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.UserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.UserDataGridView.Size = new System.Drawing.Size(1082, 300);
+            this.UserDataGridView.TabIndex = 26;
+            this.UserDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
+            this.UserDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.UserDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.UserDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.UserDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.UserDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.UserDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.UserDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.UserDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.UserDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.UserDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.UserDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.UserDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.UserDataGridView.ThemeStyle.HeaderStyle.Height = 25;
+            this.UserDataGridView.ThemeStyle.ReadOnly = false;
+            this.UserDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.UserDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.UserDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.UserDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.UserDataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.UserDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            this.UserDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2ShadowPanel1.Controls.Add(this.lblChoose);
             this.guna2ShadowPanel1.Controls.Add(this.comboRole);
             this.guna2ShadowPanel1.Controls.Add(this.btnRetrieve);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel8);
@@ -416,7 +416,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.txtId);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2ShadowPanel1.Controls.Add(this.txtPassword);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2ShadowPanel1.Controls.Add(this.lbl);
             this.guna2ShadowPanel1.Controls.Add(this.comboChoose);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2ShadowPanel1.Controls.Add(this.txtUserName);
@@ -427,6 +427,39 @@
             this.guna2ShadowPanel1.ShadowShift = 7;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(578, 415);
             this.guna2ShadowPanel1.TabIndex = 27;
+            // 
+            // lblChoose
+            // 
+            this.lblChoose.BackColor = System.Drawing.Color.Transparent;
+            this.lblChoose.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoose.Location = new System.Drawing.Point(57, 155);
+            this.lblChoose.Name = "lblChoose";
+            this.lblChoose.Size = new System.Drawing.Size(67, 21);
+            this.lblChoose.TabIndex = 57;
+            this.lblChoose.Text = "Choose : ";
+            // 
+            // comboRole
+            // 
+            this.comboRole.BackColor = System.Drawing.Color.Transparent;
+            this.comboRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboRole.FocusedColor = System.Drawing.Color.Empty;
+            this.comboRole.FocusedState.Parent = this.comboRole;
+            this.comboRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboRole.FormattingEnabled = true;
+            this.comboRole.HoverState.Parent = this.comboRole;
+            this.comboRole.ItemHeight = 30;
+            this.comboRole.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
+            this.comboRole.ItemsAppearance.Parent = this.comboRole;
+            this.comboRole.Location = new System.Drawing.Point(144, 140);
+            this.comboRole.Name = "comboRole";
+            this.comboRole.ShadowDecoration.Parent = this.comboRole;
+            this.comboRole.Size = new System.Drawing.Size(292, 36);
+            this.comboRole.TabIndex = 56;
+            this.comboRole.SelectedIndexChanged += new System.EventHandler(this.comboRole_SelectedIndexChanged);
             // 
             // btnRetrieve
             // 
@@ -443,6 +476,7 @@
             this.btnRetrieve.Size = new System.Drawing.Size(105, 33);
             this.btnRetrieve.TabIndex = 2;
             this.btnRetrieve.Text = "Retrieve";
+            this.btnRetrieve.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // guna2HtmlLabel8
             // 
@@ -464,12 +498,13 @@
             this.btnDelete.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(286, 340);
+            this.btnDelete.Location = new System.Drawing.Point(184, 311);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(187, 50);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -480,12 +515,13 @@
             this.btnUpdate.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(68, 340);
+            this.btnUpdate.Location = new System.Drawing.Point(184, 311);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(187, 50);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -496,7 +532,7 @@
             this.btnSave.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(184, 340);
+            this.btnSave.Location = new System.Drawing.Point(184, 311);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(187, 50);
@@ -572,15 +608,15 @@
             this.txtPassword.Size = new System.Drawing.Size(292, 31);
             this.txtPassword.TabIndex = 4;
             // 
-            // guna2HtmlLabel2
+            // lbl
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Black", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(29, 76);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(95, 30);
-            this.guna2HtmlLabel2.TabIndex = 41;
-            this.guna2HtmlLabel2.Text = "Choose : ";
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Roboto Black", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(29, 76);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(95, 30);
+            this.lbl.TabIndex = 41;
+            this.lbl.Text = "Choose : ";
             // 
             // comboChoose
             // 
@@ -594,12 +630,17 @@
             this.comboChoose.FormattingEnabled = true;
             this.comboChoose.HoverState.Parent = this.comboChoose;
             this.comboChoose.ItemHeight = 30;
+            this.comboChoose.Items.AddRange(new object[] {
+            "New User",
+            "Update User",
+            "Delete User"});
             this.comboChoose.ItemsAppearance.Parent = this.comboChoose;
             this.comboChoose.Location = new System.Drawing.Point(137, 76);
             this.comboChoose.Name = "comboChoose";
             this.comboChoose.ShadowDecoration.Parent = this.comboChoose;
             this.comboChoose.Size = new System.Drawing.Size(163, 36);
             this.comboChoose.TabIndex = 0;
+            this.comboChoose.SelectedIndexChanged += new System.EventHandler(this.comboChoose_SelectedIndexChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -635,45 +676,13 @@
             this.txtUserName.Size = new System.Drawing.Size(292, 29);
             this.txtUserName.TabIndex = 3;
             // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(57, 155);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(67, 21);
-            this.guna2HtmlLabel3.TabIndex = 57;
-            this.guna2HtmlLabel3.Text = "Choose : ";
-            // 
-            // comboRole
-            // 
-            this.comboRole.BackColor = System.Drawing.Color.Transparent;
-            this.comboRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboRole.FocusedColor = System.Drawing.Color.Empty;
-            this.comboRole.FocusedState.Parent = this.comboRole;
-            this.comboRole.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboRole.FormattingEnabled = true;
-            this.comboRole.HoverState.Parent = this.comboRole;
-            this.comboRole.ItemHeight = 30;
-            this.comboRole.Items.AddRange(new object[] {
-            "Admin",
-            "Staff"});
-            this.comboRole.ItemsAppearance.Parent = this.comboRole;
-            this.comboRole.Location = new System.Drawing.Point(144, 140);
-            this.comboRole.Name = "comboRole";
-            this.comboRole.ShadowDecoration.Parent = this.comboRole;
-            this.comboRole.Size = new System.Drawing.Size(292, 36);
-            this.comboRole.TabIndex = 56;
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 768);
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.medicinesDataGridView);
+            this.Controls.Add(this.UserDataGridView);
             this.Controls.Add(this.panelMenue);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2ControlBox2);
@@ -686,7 +695,7 @@
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panelMenue.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.medicinesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDataGridView)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -711,7 +720,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView medicinesDataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView UserDataGridView;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnRetrieve;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -722,11 +731,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl;
         private Guna.UI2.WinForms.Guna2ComboBox comboChoose;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblChoose;
         private Guna.UI2.WinForms.Guna2ComboBox comboRole;
     }
 }

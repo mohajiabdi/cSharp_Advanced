@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Microsoft.ReportingServices.Diagnostics.Internal;
 
 namespace Project_Management_System
 {
@@ -23,12 +25,13 @@ namespace Project_Management_System
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            RefreshUserGrid();
             btnSettingsMngmt.IconColor = System.Drawing.Color.Coral;
             btnSettingsMngmt.ForeColor = System.Drawing.Color.Coral;
 
 
             //----------------------------------------------------------
-
+            comboChoose.SelectedIndex  = 0;
             // Start with 0 opacity
             this.Opacity = 0;
 
@@ -306,17 +309,17 @@ namespace Project_Management_System
 
         private void btnCustomerMngmt_Click(object sender, EventArgs e)
         {
-            customerBtn ();
+            customerBtn();
         }
 
         private void btnSalesMngmt_Click(object sender, EventArgs e)
         {
-            salesBtn ();
+            salesBtn();
         }
 
         private void btnReportMngmt_Click(object sender, EventArgs e)
         {
-            reportBtn();
+            MessageBox.Show("Its Under Maintenance, We will Fix it Soon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSearchMngmt_Click(object sender, EventArgs e)
@@ -326,7 +329,7 @@ namespace Project_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            settingsBtn ();
+            settingsBtn();
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
@@ -336,7 +339,7 @@ namespace Project_Management_System
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit ();
+            Application.Exit();
         }
 
 
@@ -451,6 +454,8 @@ namespace Project_Management_System
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RefreshUserGrid();
+                            clearData();
                         }
                         else
                         {
@@ -471,5 +476,252 @@ namespace Project_Management_System
                 }
             }
         }
+
+
+
+
+        //----------------------------------------------------------------
+
+
+        // get user by id
+        private void getUserById(int UserID)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            // clearData();
+            using (SqlConnection conn = new SqlConnection(conString))
+            {
+                string query = "Select * from UserDt where UserId = @UserID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@UserID", UserID);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    txtUserName.Text = reader["UserName"].ToString();
+                    txtPassword.Text = reader["Password"]?.ToString(); // Handle NULL for ContactNumber
+                }
+                else
+                {
+                    MessageBox.Show("User not found. Please check the ID.",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+
+                conn.Close();
+
+            }
+
+        }
+        
+
+        private void btnRetrieve_Click(object sender, EventArgs e)
+        {
+            // clearData();
+
+            if (!int.TryParse(txtId.Text, out int UserID))
+            {
+                MessageBox.Show("Please enter a valid User ID.",
+                                "Input Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // Step 1: Fetch details if textboxes are empty
+            if (!string.IsNullOrWhiteSpace(txtId.Text))
+            {
+                getUserById(UserID); 
+                return;
+            }
+        }
+
+        private void comboRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Additional admin-specific UI elements can be displayed here
+            if (comboChoose.SelectedIndex == 0)
+            {
+               
+                clearData();
+                txtId.Visible = false;
+                lblId.Visible = false;
+                btnRetrieve.Visible = false;
+                btnSave.Visible = true;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                lblChoose.Visible = true;
+                comboRole.Visible = true;
+               
+
+            }
+            if (comboChoose.SelectedIndex == 1)
+            {
+                clearData();
+                txtId.Visible = true;
+                lblId.Visible = true;
+                btnRetrieve.Visible = true;
+                btnSave.Visible = false;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = false;
+                lblChoose.Visible = false;
+                comboRole.Visible = false;
+
+                txtId.Focus();
+
+            }
+
+
+            if (comboChoose.SelectedIndex == 2)
+            {
+                clearData();
+                txtId.Visible = true;
+                lblId.Visible = true;
+                btnRetrieve.Visible = true;
+                btnSave.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = true;
+                lblChoose.Visible = false;
+                comboRole.Visible = false;
+                txtPassword.ReadOnly = true;
+                txtUserName.ReadOnly = true;
+
+                txtId.Focus();
+
+
+            }
+          
+        }
+
+
+        // Update Customer Info
+        private void UpdateUser(int UserID, string UserName, string Password)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection connection = new SqlConnection(conString))
+            {
+                string query = "UPDATE UserDt SET UserName = @UserName, Password = @Password WHERE UserID = @UserID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserID", UserID);
+                command.Parameters.AddWithValue("@UserName", UserName);
+                command.Parameters.AddWithValue("@Password", Password);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+
+
+        // Delete Customer
+        private void DeleteCustomer(int UserID)
+        {
+                string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+                using (SqlConnection connection = new SqlConnection(conString))
+                {
+                    string query = "DELETE FROM UserDt WHERE UserID = @UserID";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+        }
+
+        //Get Customer
+        private DataTable GetUSer()
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            DataTable UserTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(conString))
+            {
+                string query = "SELECT * FROM UserDt";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(UserTable);
+            }
+
+            return UserTable;
+        }
+
+
+        //REfresh Customer GridView
+        private void RefreshUserGrid()
+        {
+            UserDataGridView.DataSource = GetUSer();
+        }
+
+        void clearData()
+        {
+            txtId.Text = string.Empty;
+            txtUserName.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtId.Text, out int UserID) ||
+                string.IsNullOrWhiteSpace(txtUserName.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Please enter a valid User ID and UserName.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                UpdateUser(UserID, txtUserName.Text, txtPassword.Text);
+                MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshUserGrid();
+                clearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            clearData();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtId.Text, out int UserID))
+            {
+                MessageBox.Show("Please enter a valid Customer ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this User?",
+                                                  "Confirm Delete",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    DeleteUser(UserID);
+                    MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefreshUserGrid();
+                    clearData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            clearData();
+        }
     }
 }
+    
+

@@ -25,6 +25,7 @@ namespace Project_Management_System
         {
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
 
@@ -44,7 +45,7 @@ namespace Project_Management_System
                 {
                     DataSet Ds = new DataSet();
                     Da.Fill(Ds, "Customers");
-                    ReportDataSource source = new ReportDataSource("DataSet2", Ds.Tables[0]);
+                    ReportDataSource source = new ReportDataSource("pharmacyDataSet3", Ds.Tables[0]);
                     string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
                         "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
                     reportViewer1.LocalReport.ReportPath = reportPath;

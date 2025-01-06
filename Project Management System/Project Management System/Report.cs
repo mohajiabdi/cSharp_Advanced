@@ -25,12 +25,16 @@ namespace Project_Management_System
 
         private void Report_Load(object sender, EventArgs e)
         {
+           
+        
+
             // TODO: This line of code loads data into the 'pharmacyDataSet1.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.pharmacyDataSet1.Customers);
+            //this.customersTableAdapter.Fill(this.pharmacyDataSet1.Customers);
             btnReportMngmt.IconColor = System.Drawing.Color.Coral;
             btnReportMngmt.ForeColor = System.Drawing.Color.Coral;
 
-            
+            GetreportSaleDetails();
+          
             this.reportViewer1.RefreshReport();
 
 
@@ -56,6 +60,7 @@ namespace Project_Management_System
 
             //---------------------------------------------------
 
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
@@ -373,6 +378,7 @@ namespace Project_Management_System
 
         private void GetreportCustomers(string value = "")
         {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
             SqlDataAdapter Da = new SqlDataAdapter();
             DataSet Ds = new DataSet();
             
@@ -381,7 +387,7 @@ namespace Project_Management_System
                 query = "select * from Customers";
             else
                 query = "select * from Customers where CustomerName like '%" + value + "%'";
-            using (Da = new SqlDataAdapter(query, connectionString))
+            using (Da = new SqlDataAdapter(query, conString))
             {
                 try
                 {
@@ -404,6 +410,7 @@ namespace Project_Management_System
 
         private void GetreportMedicine(string value = "")
         {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
             SqlDataAdapter Da = new SqlDataAdapter();
             DataSet Ds = new DataSet();
 
@@ -412,13 +419,46 @@ namespace Project_Management_System
                 query = "select * from Medicines";
             else
                 query = "select * from Medicines where Name like '%" + value + "%'";
-            using (Da = new SqlDataAdapter(query, connectionString))
+            using (Da = new SqlDataAdapter(query, conString))
             {
                 try
                 {
                     Ds = new DataSet();
                     Da.Fill(Ds, "Medicines");
-                    ReportDataSource source = new ReportDataSource("DataSet1", Ds.Tables[0]);
+                    ReportDataSource source = new ReportDataSource("Medicine", Ds.Tables[0]);
+                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
+                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
+                    reportViewer1.LocalReport.ReportPath = reportPath;
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.DataSources.Add(source);
+                    reportViewer1.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error", ex.Message);
+                }
+            }
+        }
+
+
+        private void GetreportSaleDetails(string value = "")
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            SqlDataAdapter Da = new SqlDataAdapter();
+            DataSet Ds = new DataSet();
+
+            string query = "";
+            if (value == "")
+                query = "select * from SalesDetails";
+            else
+                query = "select * from SalesDetails where MedicineID like '%" + value + "%'";
+            using (Da = new SqlDataAdapter(query, conString))
+            {
+                try
+                {
+                    Ds = new DataSet();
+                    Da.Fill(Ds, "Medicines");
+                    ReportDataSource source = new ReportDataSource("SaleDetails", Ds.Tables[0]);
                     string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
                         "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
                     reportViewer1.LocalReport.ReportPath = reportPath;
@@ -436,8 +476,17 @@ namespace Project_Management_System
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if(comboChoose.SelectedIndex == 0) { 
-                GetreportCustomers(txtSearch.Text);
+                GetreportCustomers();
             }
+        }
+
+        private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (comboChoose.SelectedIndex == 0) {  GetreportCustomers();}
+            //if(comboChoose.SelectedIndex == 1) { GetreportMedicine(txtSearch.Text);}
+            //if(comboChoose.SelectedIndex == 2) { GetreportCustomers(txtSearch.Text);}
+            //if( comboChoose.SelectedIndex == 3) { GetreportSaleDetails();}
+            GetreportCustomers();
         }
     }
 }
