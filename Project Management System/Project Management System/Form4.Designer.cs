@@ -35,11 +35,11 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.pharmacyDataSet3 = new Project_Management_System.PharmacyDataSet3();
+           // this.pharmacyDataSet3 = new Project_Management_System.PharmacyDataSet3();
             this.pharmacyDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +84,12 @@
             // 
             // pharmacyDataSet3
             // 
-            this.pharmacyDataSet3.DataSetName = "PharmacyDataSet3";
-            this.pharmacyDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.pharmacyDataSet3.DataSetName = "PharmacyDataSet3";
+           // this.pharmacyDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pharmacyDataSet3BindingSource
             // 
-            this.pharmacyDataSet3BindingSource.DataSource = this.pharmacyDataSet3;
+          //  this.pharmacyDataSet3BindingSource.DataSource = this.pharmacyDataSet3;
             this.pharmacyDataSet3BindingSource.Position = 0;
             // 
             // Form4
@@ -105,7 +105,7 @@
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,6 +119,6 @@
         private PharmacyDataSet pharmacyDataSet;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource pharmacyDataSet3BindingSource;
-        private PharmacyDataSet3 pharmacyDataSet3;
+      //  private PharmacyDataSet3 pharmacyDataSet3;
     }
 }

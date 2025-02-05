@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelMenue = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogoutMngmt = new FontAwesome.Sharp.IconButton();
@@ -46,23 +45,19 @@
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblInfo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboChoose = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.pharmacyDataSet3 = new Project_Management_System.PharmacyDataSet3();
+            this.btnStaffRole = new FontAwesome.Sharp.IconButton();
+            this.btnAdminRole = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pharmacyDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenue.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -336,22 +331,10 @@
             this.guna2ControlBox1.TabIndex = 23;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
-            // guna2ShadowPanel1
+            // contextMenuStrip1
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.txtSearch);
-            this.guna2ShadowPanel1.Controls.Add(this.btnSearch);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2ShadowPanel1.Controls.Add(this.lblInfo);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2ShadowPanel1.Controls.Add(this.comboChoose);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(252, 107);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2ShadowPanel1.ShadowShift = 7;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1082, 160);
-            this.guna2ShadowPanel1.TabIndex = 27;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // txtSearch
             // 
@@ -364,56 +347,59 @@
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(501, 76);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtSearch.Location = new System.Drawing.Point(374, 76);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Full Name";
+            this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(292, 36);
-            this.txtSearch.TabIndex = 56;
+            this.txtSearch.Size = new System.Drawing.Size(308, 45);
+            this.txtSearch.TabIndex = 28;
             // 
             // btnSearch
             // 
-            this.btnSearch.BorderRadius = 5;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.btnSearch.Font = new System.Drawing.Font("Roboto Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(843, 76);
+            this.btnSearch.Location = new System.Drawing.Point(711, 76);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(132, 47);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Size = new System.Drawing.Size(180, 45);
+            this.btnSearch.TabIndex = 29;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel8);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2ShadowPanel1.Controls.Add(this.comboChoose);
+            this.guna2ShadowPanel1.Controls.Add(this.btnSearch);
+            this.guna2ShadowPanel1.Controls.Add(this.txtSearch);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(249, 124);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.guna2ShadowPanel1.ShadowShift = 7;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1068, 142);
+            this.guna2ShadowPanel1.TabIndex = 31;
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto Black", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(378, 15);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(427, 16);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(252, 32);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(82, 32);
             this.guna2HtmlLabel8.TabIndex = 55;
-            this.guna2HtmlLabel8.Text = "Search and Filter Data";
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblInfo.Font = new System.Drawing.Font("Roboto Black", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(362, 81);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(41, 30);
-            this.lblInfo.TabIndex = 51;
-            this.lblInfo.Text = "hey";
+            this.guna2HtmlLabel8.Text = "Search";
+            this.guna2HtmlLabel8.Click += new System.EventHandler(this.guna2HtmlLabel8_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -439,43 +425,62 @@
             this.comboChoose.ItemHeight = 30;
             this.comboChoose.Items.AddRange(new object[] {
             "Customer",
-            "Medicine",
-            "Sales",
-            "SalesDetails"});
+            "Medicine"});
             this.comboChoose.ItemsAppearance.Parent = this.comboChoose;
             this.comboChoose.Location = new System.Drawing.Point(137, 76);
             this.comboChoose.Name = "comboChoose";
             this.comboChoose.ShadowDecoration.Parent = this.comboChoose;
-            this.comboChoose.Size = new System.Drawing.Size(200, 36);
+            this.comboChoose.Size = new System.Drawing.Size(163, 36);
             this.comboChoose.TabIndex = 0;
             this.comboChoose.SelectedIndexChanged += new System.EventHandler(this.comboChoose_SelectedIndexChanged);
             // 
-            // pharmacyDataSet3
+            // btnStaffRole
             // 
-            this.pharmacyDataSet3.DataSetName = "PharmacyDataSet3";
-            this.pharmacyDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnStaffRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnStaffRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStaffRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnStaffRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffRole.ForeColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnStaffRole.IconColor = System.Drawing.Color.White;
+            this.btnStaffRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStaffRole.IconSize = 30;
+            this.btnStaffRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffRole.Location = new System.Drawing.Point(1244, 47);
+            this.btnStaffRole.Name = "btnStaffRole";
+            this.btnStaffRole.Size = new System.Drawing.Size(104, 55);
+            this.btnStaffRole.TabIndex = 36;
+            this.btnStaffRole.Text = "Staff";
+            this.btnStaffRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaffRole.UseVisualStyleBackColor = false;
+            // 
+            // btnAdminRole
+            // 
+            this.btnAdminRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnAdminRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminRole.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnAdminRole.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminRole.ForeColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAdminRole.IconColor = System.Drawing.Color.White;
+            this.btnAdminRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdminRole.IconSize = 30;
+            this.btnAdminRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminRole.Location = new System.Drawing.Point(1244, 47);
+            this.btnAdminRole.Name = "btnAdminRole";
+            this.btnAdminRole.Size = new System.Drawing.Size(104, 55);
+            this.btnAdminRole.TabIndex = 35;
+            this.btnAdminRole.Text = "Admin";
+            this.btnAdminRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdminRole.UseVisualStyleBackColor = false;
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.pharmacyDataSet3BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Project_Management_System.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(263, 325);
+            this.reportViewer1.Location = new System.Drawing.Point(249, 301);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(998, 402);
-            this.reportViewer1.TabIndex = 28;
-            // 
-            // CustomersBindingSource
-            // 
-            this.CustomersBindingSource.DataMember = "Customers";
-            this.CustomersBindingSource.DataSource = this.pharmacyDataSet3;
-            // 
-            // pharmacyDataSet3BindingSource
-            // 
-            this.pharmacyDataSet3BindingSource.DataSource = this.pharmacyDataSet3;
-            this.pharmacyDataSet3BindingSource.Position = 0;
+            this.reportViewer1.Size = new System.Drawing.Size(1068, 441);
+            this.reportViewer1.TabIndex = 37;
             // 
             // Report
             // 
@@ -483,6 +488,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 768);
             this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.btnStaffRole);
+            this.Controls.Add(this.btnAdminRole);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.panelMenue);
             this.Controls.Add(this.lblTitle);
@@ -498,9 +505,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyDataSet3BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,16 +527,15 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ComboBox comboChoose;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private PharmacyDataSet3 pharmacyDataSet3;
+        private FontAwesome.Sharp.IconButton btnStaffRole;
+        private FontAwesome.Sharp.IconButton btnAdminRole;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource CustomersBindingSource;
-        private System.Windows.Forms.BindingSource pharmacyDataSet3BindingSource;
     }
 }

@@ -33,6 +33,7 @@ namespace Project_Management_System
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            ClearData();
             //LoadRoles();
             panelLogin.Visible = true;
             panelRegister.Visible = false;
@@ -62,6 +63,15 @@ namespace Project_Management_System
         }
 
 
+
+        void ClearData()
+        {
+            txtNewPassword.Text = string.Empty;
+            txtNewUser.Text = string.Empty;
+            txtUser.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+        }
+
         //---------------------------------------------------------------------------------------------------------
 
         
@@ -70,6 +80,8 @@ namespace Project_Management_System
         {
             panelLogin.Visible = false;
             panelRegister.Visible = true;
+            ClearData();
+            txtNewUser.Focus();
 
         }
 
@@ -78,6 +90,7 @@ namespace Project_Management_System
 
         private void btnGoLogin_Click_1(object sender, EventArgs e)
         {
+            ClearData();
             panelLogin.Visible = true;
             panelRegister.Visible = false;
             txtUser.Focus();
@@ -117,6 +130,8 @@ namespace Project_Management_System
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearData();
+                            txtNewUser.Focus();
                         }
                         else
                         {
@@ -231,6 +246,15 @@ namespace Project_Management_System
                         MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void comboRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboRole.SelectedIndex != -1) { 
+                ClearData();
+                txtNewUser.Focus();
+
             }
         }
     }

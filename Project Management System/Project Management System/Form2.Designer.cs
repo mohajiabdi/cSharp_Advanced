@@ -259,6 +259,7 @@
             this.comboRole.ShadowDecoration.Parent = this.comboRole;
             this.comboRole.Size = new System.Drawing.Size(319, 36);
             this.comboRole.TabIndex = 26;
+            this.comboRole.SelectedIndexChanged += new System.EventHandler(this.comboRole_SelectedIndexChanged);
             // 
             // btnGoLogin
             // 

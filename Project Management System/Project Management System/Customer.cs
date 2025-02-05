@@ -496,7 +496,7 @@ namespace Project_Management_System
 
         private void btnReportMngmt_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Its Under Maintenance, We will Fix it Soon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            reportBtn();
             
         }
 
@@ -550,6 +550,15 @@ namespace Project_Management_System
                 MessageBox.Show("Name and Phone is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            // Regular Expression for + and numbers only
+            string phonePattern = @"^\+?[0-9]+$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, phonePattern))
+            {
+                MessageBox.Show("Invalid phone number. Only numbers and an optional '+' sign at the beginning are allowed.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
 
             try
             {
@@ -575,6 +584,15 @@ namespace Project_Management_System
                 MessageBox.Show("Please enter a valid Customer ID and Name.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            // Regular Expression for + and numbers only
+            string phonePattern = @"^\+?[0-9]+$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, phonePattern))
+            {
+                MessageBox.Show("Invalid phone number. Only numbers and an optional '+' sign at the beginning are allowed.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
 
             try
             {

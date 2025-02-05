@@ -20,12 +20,36 @@ namespace Project_Management_System
         public Report()
         {
             InitializeComponent();
+
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+              
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+                
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
+
+
             this.Load += Report_Load;
         }
 
         private void Report_Load(object sender, EventArgs e)
         {
-           
+            comboChoose.SelectedIndex = 0;
         
 
             // TODO: This line of code loads data into the 'pharmacyDataSet1.Customers' table. You can move, or remove it, as needed.
@@ -33,9 +57,10 @@ namespace Project_Management_System
             btnReportMngmt.IconColor = System.Drawing.Color.Coral;
             btnReportMngmt.ForeColor = System.Drawing.Color.Coral;
 
-            GetreportSaleDetails();
+            
           
             this.reportViewer1.RefreshReport();
+            //this.reportViewerCustomer.RefreshReport();
 
 
 
@@ -60,6 +85,8 @@ namespace Project_Management_System
 
             //---------------------------------------------------
 
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
@@ -376,117 +403,154 @@ namespace Project_Management_System
 
         //Methods 
 
-        private void GetreportCustomers(string value = "")
+      
+
+        //--------------------------------------------------------------------------------------------------------------------------------------
+
+        private void GetReportMedicine(string filterValue = "")
         {
-            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
-            SqlDataAdapter Da = new SqlDataAdapter();
-            DataSet Ds = new DataSet();
-            
-            string query = "";
-            if (value == "")
-                query = "select * from Customers";
-            else
-                query = "select * from Customers where CustomerName like '%" + value + "%'";
-            using (Da = new SqlDataAdapter(query, conString))
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            string query;
+
+            // Construct the query based on the filter value
+            if (string.IsNullOrWhiteSpace(filterValue))
             {
-                try
+                query = "SELECT * FROM Medicines";
+            }
+            else
+            {
+                query = "SELECT * FROM Medicines WHERE Name LIKE @FilterValue";
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    Ds = new DataSet();
-                    Da.Fill(Ds, "Customers");
-                    ReportDataSource source = new ReportDataSource("DataSet1", Ds.Tables[0]);
-                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
-                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
-                    reportViewer1.LocalReport.ReportPath = reportPath;
-                    reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.DataSources.Add(source);
-                    reportViewer1.RefreshReport();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("error", ex.Message);
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        if (!string.IsNullOrWhiteSpace(filterValue))
+                        {
+                            command.Parameters.AddWithValue("@FilterValue", "%" + filterValue + "%");
+                        }
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataSet dataSet = new DataSet();
+                            adapter.Fill(dataSet, "Medicines");
+
+                            ReportDataSource source = new ReportDataSource("PharmacyDataSet", dataSet.Tables[0]);
+
+                            string reportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                              "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report2.rdlc");
+                            reportViewer1.LocalReport.ReportPath = reportPath;
+                            reportViewer1.LocalReport.DataSources.Clear();
+                            reportViewer1.LocalReport.DataSources.Add(source);
+                            reportViewer1.RefreshReport();
+                        }
+                    }
                 }
             }
-        }
-
-        private void GetreportMedicine(string value = "")
-        {
-            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
-            SqlDataAdapter Da = new SqlDataAdapter();
-            DataSet Ds = new DataSet();
-
-            string query = "";
-            if (value == "")
-                query = "select * from Medicines";
-            else
-                query = "select * from Medicines where Name like '%" + value + "%'";
-            using (Da = new SqlDataAdapter(query, conString))
+            catch (Exception ex)
             {
-                try
-                {
-                    Ds = new DataSet();
-                    Da.Fill(Ds, "Medicines");
-                    ReportDataSource source = new ReportDataSource("Medicine", Ds.Tables[0]);
-                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
-                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
-                    reportViewer1.LocalReport.ReportPath = reportPath;
-                    reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.DataSources.Add(source);
-                    reportViewer1.RefreshReport();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("error", ex.Message);
-                }
+                MessageBox.Show($"An error occurred while generating the report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 
-        private void GetreportSaleDetails(string value = "")
-        {
-            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
-            SqlDataAdapter Da = new SqlDataAdapter();
-            DataSet Ds = new DataSet();
 
-            string query = "";
-            if (value == "")
-                query = "select * from SalesDetails";
-            else
-                query = "select * from SalesDetails where MedicineID like '%" + value + "%'";
-            using (Da = new SqlDataAdapter(query, conString))
+        //----------------------------------------------------------------------------------
+
+        private void GetReportCustomer(string filterValue = "")
+        {
+            string connectionString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            string query;
+
+            // Construct the query based on the filter value
+            if (string.IsNullOrWhiteSpace(filterValue))
             {
-                try
+                query = "SELECT * FROM Customers";
+            }
+            else
+            {
+                query = "SELECT * FROM Customers WHERE CustomerName LIKE @FilterValue";
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    Ds = new DataSet();
-                    Da.Fill(Ds, "Medicines");
-                    ReportDataSource source = new ReportDataSource("SaleDetails", Ds.Tables[0]);
-                    string reportPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
-                        "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
-                    reportViewer1.LocalReport.ReportPath = reportPath;
-                    reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.DataSources.Add(source);
-                    reportViewer1.RefreshReport();
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        if (!string.IsNullOrWhiteSpace(filterValue))
+                        {
+                            command.Parameters.AddWithValue("@FilterValue", "%" + filterValue + "%");
+                        }
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            DataSet dataSet = new DataSet();
+                            adapter.Fill(dataSet, "Customers");
+
+                            ReportDataSource source = new ReportDataSource("DataSet1", dataSet.Tables[0]);
+
+                            string reportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                              "C:\\Users\\RAQIIS COMPUTER\\Documents\\GitHub\\Coding-Zone\\cSharp_Advanced\\Project Management System\\Project Management System\\Report1.rdlc");
+                            reportViewer1.LocalReport.ReportPath = reportPath;
+                            reportViewer1.LocalReport.DataSources.Clear();
+                            reportViewer1.LocalReport.DataSources.Add(source);
+                            reportViewer1.RefreshReport();
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("error", ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while generating the report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(comboChoose.SelectedIndex == 0) { 
-                GetreportCustomers();
+            
+
+
+            if (comboChoose.SelectedIndex == 0)
+            {
+                GetReportCustomer(txtSearch.Text);
             }
+
+            if (comboChoose.SelectedIndex == 1)
+            {
+                GetReportMedicine(txtSearch.Text);
+            }
+           
+        }
+
+        private void guna2HtmlLabel8_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void comboChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (comboChoose.SelectedIndex == 0) {  GetreportCustomers();}
-            //if(comboChoose.SelectedIndex == 1) { GetreportMedicine(txtSearch.Text);}
-            //if(comboChoose.SelectedIndex == 2) { GetreportCustomers(txtSearch.Text);}
-            //if( comboChoose.SelectedIndex == 3) { GetreportSaleDetails();}
-            GetreportCustomers();
+            if (comboChoose.SelectedIndex == 0) {
+                
+                txtSearch.Text = string.Empty;
+                txtSearch.Focus();
+                GetReportCustomer();
+            }
+
+            if (comboChoose.SelectedIndex == 1)
+            {
+                txtSearch.Text = string.Empty;
+                txtSearch.Focus();
+                GetReportMedicine();
+            }
+           
         }
     }
 }

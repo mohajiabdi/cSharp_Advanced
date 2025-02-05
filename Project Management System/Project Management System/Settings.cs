@@ -20,6 +20,29 @@ namespace Project_Management_System
             InitializeComponent();
 
 
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+
+                // Show Admin-specific features
+                btnAdminRole.Visible = true;
+                btnStaffRole.Visible = false;
+                // Additional admin-specific UI elements can be displayed here
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Show Admin-specific features
+                btnAdminRole.Visible = false;
+                btnStaffRole.Visible = true;
+                // Additional admin-specific UI elements can be displayed here
+
+            }
+
+
             this.Load += Settings_Load;
         }
 
@@ -319,7 +342,7 @@ namespace Project_Management_System
 
         private void btnReportMngmt_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Its Under Maintenance, We will Fix it Soon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            reportBtn();
         }
 
         private void btnSearchMngmt_Click(object sender, EventArgs e)
@@ -571,8 +594,8 @@ namespace Project_Management_System
                 btnSave.Visible = false;
                 btnUpdate.Visible = true;
                 btnDelete.Visible = false;
-                lblChoose.Visible = false;
-                comboRole.Visible = false;
+                lblChoose.Visible = true;
+                comboRole.Visible = true;
 
                 txtId.Focus();
 
@@ -618,6 +641,39 @@ namespace Project_Management_System
                 connection.Close();
             }
         }
+
+        private void UpdateUser1(int UserID, string UserName, string Password, string Role)
+        {
+            string conString = "Data Source=DESKTOP-LK1SELP;Database=Pharmacy;Integrated Security=true;";
+            using (SqlConnection connection = new SqlConnection(conString))
+            {
+                string query = "UPDATE UserDt SET UserName = @UserName, Password = @Password, Role = @Role WHERE UserID = @UserID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserID", UserID);
+                command.Parameters.AddWithValue("@UserName", UserName);
+                command.Parameters.AddWithValue("@Password", Password);
+                command.Parameters.AddWithValue("@Role", Role);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed. Please check the User ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
 
 
@@ -680,8 +736,10 @@ namespace Project_Management_System
 
             try
             {
-                UpdateUser(UserID, txtUserName.Text, txtPassword.Text);
-                MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string role = comboRole.SelectedItem.ToString();
+                //UpdateUser(UserID, txtUserName.Text, txtPassword.Text);
+                UpdateUser1(UserID, txtUserName.Text, txtPassword.Text, role);
+               // MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshUserGrid();
                 clearData();
             }
