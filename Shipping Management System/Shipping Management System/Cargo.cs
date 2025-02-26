@@ -1275,6 +1275,29 @@ namespace Shipping_Management_System
                     comboContainerStatus.Items.Add("In Transit");
                     comboContainerStatus.Items.Add("Unloaded");
                 }
+                if (comboContainerChoose.SelectedIndex == 1)
+                {
+                    //PopulateShipNames();
+                    PopulatePortNames();
+                    btnRetrieveContainer.Visible = false;
+                    txtShipId.Visible = true;
+                    lblId.Visible = false;
+                    txtContainerID.Visible = false;
+
+                    btnDelete.Visible = false;
+                    btnUpdate.Visible = false;
+                    btnSave.Visible = true;
+
+                    txtShipId.ReadOnly = false;
+                    txtDescription.ReadOnly = false;
+                    comboContainerStatus.Enabled = true;
+                    comboContainerLastPort.Enabled = true;
+
+
+                    txtShipId.Enabled = true;
+                    txtDescription.Enabled = true;
+
+                }
 
 
                 // Additional admin-specific UI elements can be displayed here
@@ -1426,7 +1449,9 @@ namespace Shipping_Management_System
                 panelPort.Visible = false;
                 panelShip.Visible = false;
 
-               
+                
+
+
                 RefreshContainerGrid();
             }
             if (comboChoose.SelectedIndex == 2)
@@ -1434,6 +1459,7 @@ namespace Shipping_Management_System
                 panelContainer.Visible = false;
                 panelPort.Visible = true;
                 panelShip.Visible = false;
+                comboPortChoose.SelectedIndex = 1;
 
 
                 RefreshPortGrid();
@@ -1531,7 +1557,7 @@ namespace Shipping_Management_System
                         btnUpdatePort.Visible = false;
                         btnDeletePort.Visible = false;
                     }
-                   
+
                 }
             }
 
@@ -1824,7 +1850,24 @@ namespace Shipping_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            userManagerBtn();
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Additional admin-specific UI elements can be displayed here
+                userManagerBtn();
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                System.Windows.MessageBox.Show("You don't have Previlege to access Users Manager Settings", "Error", (MessageBoxButton)MessageBoxButtons.OK, (MessageBoxImage)MessageBoxIcon.Information);
+
+
+
+            }
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
@@ -1839,7 +1882,23 @@ namespace Shipping_Management_System
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView1.ReadOnly = true;
+        }
 
+        private void panelShip_Paint(object sender, PaintEventArgs e)
+        {
+            comboShipChoose.SelectedIndex = 1;
+
+        }
+
+        private void panelPort_Paint(object sender, PaintEventArgs e)
+        {
+            comboPortChoose.SelectedIndex = 1;
+        }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+            comboContainerChoose.SelectedIndex = 1;
         }
     }
 }

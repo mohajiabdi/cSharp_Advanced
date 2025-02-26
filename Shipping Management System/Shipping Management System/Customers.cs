@@ -362,22 +362,48 @@ namespace Shipping_Management_System
             // Validate required fields
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Customer name cannot be empty.");
+
+            // Validate that the CustomerName does not contain any numbers
+            if (name.Any(char.IsDigit))
+                throw new ArgumentException("Customer name cannot contain numbers.");
+
             if (string.IsNullOrWhiteSpace(contactPhone))
                 throw new ArgumentException("Contact phone cannot be empty.");
 
-            // Validate phone number (must contain only digits)
+            // Validate phone number (must contain only digits and length between 6 and 11)
             if (!contactPhone.All(char.IsDigit))
                 throw new ArgumentException("Contact phone must contain only numbers.");
+
+            if (contactPhone.Length < 6 || contactPhone.Length > 11)
+                throw new ArgumentException("Contact phone must be between 6 and 11 digits.");
 
             // Validate email format (if provided)
             if (!string.IsNullOrWhiteSpace(contactEmail) && !contactEmail.Contains("@"))
                 throw new ArgumentException("Invalid email format.");
 
+            // Validate DateOfBirth: Must be between 18 and 80 years old
+            if (dateOfBirth.HasValue)
+            {
+                DateTime birthDate = dateOfBirth.Value;
+                DateTime today = DateTime.Today;
+
+                // Calculate the minimum and maximum valid birth dates
+                DateTime minBirthDate = today.AddYears(-80); // 80 years ago
+                DateTime maxBirthDate = today.AddYears(-18); // 18 years ago
+
+                // Check if the provided DateOfBirth is within the valid range
+                if (birthDate < minBirthDate || birthDate > maxBirthDate)
+                {
+                    throw new ArgumentException("Date of Birth must be between 18 and 80 years ago.");
+                }
+            }
+
+            // Proceed with adding the customer to the database (not shown here)
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-            INSERT INTO Customers (CustomerName, ContactPhone, ContactEmail, DateOfBirth, Address) 
-            VALUES (@Name, @ContactPhone, @ContactEmail, @DateOfBirth, @Address)";
+        INSERT INTO Customers (CustomerName, ContactPhone, ContactEmail, DateOfBirth, Address) 
+        VALUES (@Name, @ContactPhone, @ContactEmail, @DateOfBirth, @Address)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Name", name);
@@ -426,15 +452,55 @@ namespace Shipping_Management_System
         // Update Customer Info
         private void UpdateCustomer(int customerID, string name, string contactPhone, string contactEmail, DateTime? dateOfBirth = null, string address = null)
         {
+            // Validate required fields
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Customer name cannot be empty.");
+            // Validate that the CustomerName does not contain any numbers
+            if (name.Any(char.IsDigit))
+                throw new ArgumentException("Customer name cannot contain numbers.");
+
+            if (string.IsNullOrWhiteSpace(contactPhone))
+                throw new ArgumentException("Contact phone cannot be empty.");
+
+            // Validate phone number (must contain only digits)
+            if (!contactPhone.All(char.IsDigit))
+                throw new ArgumentException("Contact phone must contain only numbers.");
+
+            if (contactPhone.Length < 6 || contactPhone.Length > 11)
+                throw new ArgumentException("Contact phone must be between 6 and 11 digits.");
+
+            // Validate email format (if provided)
+            if (!string.IsNullOrWhiteSpace(contactEmail) && !contactEmail.Contains("@"))
+                throw new ArgumentException("Invalid email format.");
+
+            // Validate DateOfBirth: Must be between 18 and 80 years old
+            if (dateOfBirth.HasValue)
+            {
+                DateTime birthDate = dateOfBirth.Value;
+                DateTime today = DateTime.Today;
+
+                // Calculate the minimum and maximum valid birth dates
+                DateTime minBirthDate = today.AddYears(-80); // 80 years ago
+                DateTime maxBirthDate = today.AddYears(-18); // 18 years ago
+
+                // Check if the provided DateOfBirth is within the valid range
+                if (birthDate < minBirthDate || birthDate > maxBirthDate)
+                {
+                    throw new ArgumentException("Date of Birth must be between 18 and 80 years ago.");
+                }
+            }
+
+            // Proceed with the database update if all validations pass
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Customers " +
-                               "SET CustomerName = @CustomerName, " +
-                               "ContactPhone = @ContactPhone, " +
-                               "ContactEmail = @ContactEmail, " +
-                               "DateOfBirth = @DateOfBirth, " +
-                               "Address = @Address " +
-                               "WHERE CustomerID = @CustomerID";
+                                "SET CustomerName = @CustomerName, " +
+                                "ContactPhone = @ContactPhone, " +
+                                "ContactEmail = @ContactEmail, " +
+                                "DateOfBirth = @DateOfBirth, " +
+                                "Address = @Address " +
+                                "WHERE CustomerID = @CustomerID";
+
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@CustomerID", customerID);
                 command.Parameters.AddWithValue("@CustomerName", name);
@@ -443,11 +509,24 @@ namespace Shipping_Management_System
                 command.Parameters.AddWithValue("@DateOfBirth", dateOfBirth ?? (object)DBNull.Value);
                 command.Parameters.AddWithValue("@Address", address ?? (object)DBNull.Value);
 
-                connection.Open();
-                command.ExecuteNonQuery();
-                connection.Close();
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    // Handle the exception (e.g., log it, rethrow it, etc.)
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                    throw; // Re-throw the exception to propagate it
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
+
 
 
 
@@ -545,7 +624,24 @@ namespace Shipping_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            userManagerBtn();
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Additional admin-specific UI elements can be displayed here
+                userManagerBtn();
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                MessageBox.Show("You don't have Previlege to access Users Manager Settings", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
@@ -752,7 +848,20 @@ namespace Shipping_Management_System
                     
 
                 }
-                
+                if (comboChoose.SelectedIndex == 1)
+                {
+
+                    clearData();
+                    txtId.Visible = false;
+                    lblId.Visible = false;
+                    btnRetrieve.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    btnDelete.Visible = false;
+                    txtName.Focus();
+
+                }
+
 
 
             }
@@ -816,6 +925,11 @@ namespace Shipping_Management_System
         private void btnSearchMngmt_Click(object sender, EventArgs e)
         {
             Aboutbtn();
+        }
+
+        private void customersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            customersDataGridView.ReadOnly = true;
         }
     }
     }

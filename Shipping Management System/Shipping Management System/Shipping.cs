@@ -686,6 +686,7 @@ namespace Shipping_Management_System
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView1.ReadOnly = true;
             // Ensure that a valid row is clicked (not the header)
             if (e.RowIndex >= 0)
             {
@@ -922,7 +923,24 @@ namespace Shipping_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            userManagerBtn();
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Additional admin-specific UI elements can be displayed here
+                userManagerBtn();
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                MessageBox.Show("You don't have Previlege to access Users Manager Settings", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
         }
     }
 }

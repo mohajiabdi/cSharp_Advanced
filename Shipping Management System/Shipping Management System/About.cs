@@ -324,7 +324,25 @@ namespace Shipping_Management_System
 
         private void btnSettingsMngmt_Click(object sender, EventArgs e)
         {
-            userManagerBtn();
+            
+
+            // Check if the logged-in user is an Admin
+            if (Login.CurrentUserRole == "Admin")
+            {
+                // Additional admin-specific UI elements can be displayed here
+                userManagerBtn(); 
+            }
+
+            // Check if the logged-in user is an Staff
+            if (Login.CurrentUserRole == "Staff")
+            {
+
+                // Additional admin-specific UI elements can be displayed here
+                MessageBox.Show("You don't have Previlege to access Users Manager Settings", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
         }
 
         private void btnLogoutMngmt_Click(object sender, EventArgs e)
